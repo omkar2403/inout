@@ -1,0 +1,2 @@
+# inout
+Gate Register
