@@ -4,3 +4,5 @@ Introduction:
 	The system uses koha database to fetch the information of patrons and store it another database along with the location, entry time and exit time. These data can be accessed from admin panel in various manner like datewise, timewise, USN wise and many more.
 
 Thank You
+
+omkar@webright.in
