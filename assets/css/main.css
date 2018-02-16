@@ -1,0 +1,225 @@
+section {
+    padding: 20px 0 0;
+}
+
+section.head {
+    background: #00c6ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0072ff, #00c6ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0072ff, #00c6ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.card,
+.form_main,
+.in_out_status div.status_block,
+#clockdate {
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transition: .25s box-shadow;
+    transition: .25s box-shadow;
+    padding: 10px;
+}
+
+.form_main,
+#clockdate {
+    height: 140px;
+}
+
+#clockdate {
+    padding: 0;
+}
+
+.clockdate-wrapper {
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#clock {
+    background-color: transparent;
+    font-family: sans-serif;
+    font-size: 56px;
+    text-shadow: 0px 0px 1px #fff;
+    color: #fff;
+}
+
+#clock span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 25px;
+    position: relative;
+    top: -27px;
+    left: -10px;
+}
+
+#date {
+    letter-spacing: 5px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.card .h4,
+.card .h5,
+.card .h6,
+.card h4,
+.card h5,
+.card h6 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.card .card-title {
+    word-wrap: break-word;
+}
+
+.img_container .card-img-top {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.usn_input {
+    width: 75%;
+    margin: 10px auto;
+    height: 50px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.in_out_status div.h1 {
+    margin: 5% auto;
+    font-size: 60px;
+}
+
+.in_out_status div.h1.stats {
+    font-size: 30px;
+    margin: 10.5% auto;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+}
+
+.in_out_status div.status_block span.msgs {
+    margin: 20px;
+    display: block;
+}
+
+.in_out_status div.status_block.msg {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+section.main {
+    padding-top: 30px;
+}
+
+.form_main div.h2 {
+    margin-top: 10px;
+}
+
+.h3 {
+    margin-top: 6px;
+}
+
+.stat_table {
+    margin-left: 24px;
+    margin-bottom: 10px;
+}
+
+.tat {
+    padding-right: 80px;
+    padding-bottom: 10px;
+}
+
+footer.foot {
+    background: #7474BF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #348AC7, #7474BF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #348AC7, #7474BF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.t-shadow {
+    text-shadow: 6px 6px 6px rgba(177, 173, 173, 0.38), 6px 6px 8px rgba(128, 128, 136, 0.37);
+}
+
+.but {
+    margin-left: 20px;
+}
+
+.setup-dis span {
+    display: block;
+    color: gray;
+    font-size: 20px;
+}
+
+.dis {
+    display: block;
+    font-size: 22px;
+    color: black;
+}
+
+
+/*.delay{
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -animation-delay: 2s;
+}
+
+.animated {
+  -webkit-animation-duration: 200ms;
+  -moz-animation-duration: 200ms;
+  animation-duration: 200ms;
+}*/
+
+article.animated {
+    -webkit-animation-duration: 700ms;
+    -moz-animation-duration: 700ms;
+    animation-duration: 700ms;
+}
+
+article.delay.animated {
+    -animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+}
+
+span.delay.animated {
+    -animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+}
+
+@media screen and (max-width: 767px) {
+    .main_title .title {
+        font-size: 22px;
+    }
+    .main_title .sub_title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}
