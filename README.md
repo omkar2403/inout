@@ -8,6 +8,8 @@ The system uses koha database to fetch the information of patrons and store it a
 
 Thank You
 
+Locate/Find Readme.pdf For more information.
+
 Profile @ https://omkar2403.github.io/its_me/
 
 Mail Me @ omkar.kakeru@gmail.com
