@@ -5,4 +5,5 @@ Introduction:
 
 Thank You
 
-omkar@webright.in
+Profile @ https://omkar2403.github.io/its_me/
+Mail Me @ omkar@webright.in
