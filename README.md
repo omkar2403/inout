@@ -1,3 +1,5 @@
+Locate/Find Readme.pdf For more information.
+
 Introduction:
 
 In out management system is web based application. It is used to track the patrons who visits to library or related locations like study zone, reading room etc. It’ll scan the barcode from the ID and log the entry time and exit time of the patrons. The patron data will be fetched from the KOHA database along with the images and displayed on this system.
