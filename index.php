@@ -178,7 +178,7 @@ include "stats.php";
 					$(".inout").empty().append("___");
 				}, 5200);
 				setTimeout(function(){
-					window.location.replace("/index.php");
+					window.location.replace("/inout/index.php");
 				}, 10100);
 			});
 		</script>
