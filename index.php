@@ -141,12 +141,12 @@ include "stats.php";
 								</tr>
 								<tr>
 									<span class="msgs">
-										<td class="tat">#Boys</td><td> <?php echo $male[0]; ?></td>
+										<td class="tat">#Male</td><td> <?php echo $male[0]; ?></td>
 									</span>
 								</tr>
 								<tr>
 									<span class="msgs">
-										<td class="tat">#Girls</td><td> <?php echo $female[0]; ?></td>
+										<td class="tat">#Female</td><td> <?php echo $female[0]; ?></td>
 									</span>
 								</tr>
 								<tr>
