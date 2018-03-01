@@ -37,7 +37,7 @@ session_start();
                             <input type="password" class="form-control" name="pass" placeholder="Password">
                             <br>
                             <select class="form-control" name="loc" required="">
-                                <option>Select Location</option>
+                                <option placeholder="Select Location"></option>
                                 <?php
                                     $query = "select * from `loc`";
                                     $res = mysql_query("$query",$link2) or die("Invalid Query:".mysql_error());
