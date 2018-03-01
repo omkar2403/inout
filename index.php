@@ -20,17 +20,17 @@ include "stats.php";
 		<section class="head">
 			<div class="container-fluid">
 				<div class="row">
-				<div class="col-xs-2 col-md-2 col-lg-2">
+				<!-- <div class="col-xs-2 col-md-2 col-lg-2">
 					<img src="img/logo.jpg" height="125" width="125">
-				</div>
-					<div class="col-xs-8 col-md-8 col-lg-8 text-center main_title" >
+				</div> -->
+					<div class="col-xs-12 col-md-12 col-lg-12 text-center main_title" >
 						<div class="h1 title" style="font-size: 29px;"><b><?php echo $cname[0]; ?></b></div>
 						<div class="h2 sub_title"><b>Welcome to <?php echo $_SESSION['loc']; ?></b><br><h3>In / Out Management System</h3></div>
 						
 					</div>
-				<div class="col-xs-2 col-md-2 col-lg-2" >
+				<!-- <div class="col-xs-2 col-md-2 col-lg-2" >
 					<img src="img/iso.png" style="float:right;" height="125" width="125">
-				</div>
+				</div> -->
 				</div>
 			</div>
 		</section>
