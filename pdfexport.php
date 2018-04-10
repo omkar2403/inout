@@ -133,7 +133,7 @@
         }
         $result = mysql_query("$sql", $link2) or die("Invalid query: " . mysql_error());
         $visit = mysql_fetch_row($result);
-        $output .= 'Statestics;Boys-'.$male[0].';Girls-'.$female[0].';Visits-'.$visit[0];
+        $output .= 'Statistics;Boys-'.$male[0].';Girls-'.$female[0].';Visits-'.$visit[0];
         $myfile = fopen("cache/".$slib.".txt", "w") or die("Unable to open file!");
 		fwrite($myfile, $output);
 		fclose($myfile);
@@ -227,7 +227,7 @@
 		fwrite($myfile, $output);
 		fclose($myfile);
 		$pdf = new PDF();
-		$pdf->SetTitle('Statestics_'.$slib.'_'.$fdate.'_'.$tdate.'.pdf');
+		$pdf->SetTitle('statistics_'.$slib.'_'.$fdate.'_'.$tdate.'.pdf');
 	    // Column headings
 	    $header = array('Date', 'Day', 'Male', 'Female', 'Visits', 'Location');
 	    // Data loading
@@ -237,11 +237,11 @@
 		$pdf->Cell(0, 5, $cname[0], 0, 1, "C");
 		$pdf->Ln();
 		$pdf->SetFont("Times", "B", "12");
-		$pdf->Cell(0, 5, "Statestics As ".$slib." From ".$fdate." To ".$tdate, 0, 1, "C");
+		$pdf->Cell(0, 5, "statistics As ".$slib." From ".$fdate." To ".$tdate, 0, 1, "C");
 		$pdf->Ln();
 		$pdf->SetFont('Arial','',9);
 	    $pdf->FancyTable($header,$data);
-	    $pdf->Output('Statestics_'.$slib.'_'.$fdate.'_'.$tdate.'.pdf','I');
+	    $pdf->Output('statistics_'.$slib.'_'.$fdate.'_'.$tdate.'.pdf','I');
 	} 
 
 	if (isset($_POST['sd'])) {

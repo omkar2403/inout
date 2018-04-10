@@ -9,7 +9,7 @@
         $date = date('Y-m-d');
         $time = date('H:i:s');
         error_reporting(E_ALL);
-        $sql = "select surname,borrowernumber,sex,categorycode from borrowers where cardnumber='$usn'";
+        $sql = "select CONCAT(title,' ',firstname,' ',surname) AS surname,borrowernumber,sex,categorycode from borrowers where cardnumber='$usn'";
         $result = mysql_query("$sql", $link1) or die("Invalid query: " . mysql_error());
         $data1 = mysql_fetch_row($result);
         $sql = "select imagefile from patronimage where borrowernumber='$data1[1]'";

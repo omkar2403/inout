@@ -22,3 +22,5 @@ Mail Me @ omkar.kakeru@gmail.com
 
 Demo Video @ https://www.youtube.com/watch?v=1LqqwKYamHc&t=12s
 
+In Out Management System by Omkar Kakeru is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+

@@ -30,6 +30,7 @@ include 'dbconn.php';
                                     if($_SESSION['id']=="superuser"){
                                 ?>
                                 <a href="setup.php" target="_blank" class="btn but btn-fill btn-success">Setup</a>
+                                <a href="cc_license.html" target="_blank" class="btn but btn-fill btn-primary">License</a>
                                 <a href="logout.php" class="btn btn-fill btn-danger" style="float: right; margin-right: 20px">Logout</a>
                                 <select class="" style="float: right; margin-right: 20px; margin-top: 10px; color: black;" name="slib" onchange="this.form.submit();">
                                     <?php
@@ -48,6 +49,7 @@ include 'dbconn.php';
                                 ?>
                                 <a href="today.php" class="but btn btn-fill btn-success">Today</a>
                                 <a href="register.php" class="but btn btn-fill btn-warning">Register</a>
+                                <a href="cc_license.html" target="_blank" class="btn but btn-fill btn-primary">License</a>
                                 <a href="logout.php" class="btn btn-fill btn-danger" style="float: right; margin-right: 20px">Logout</a>
                                 <?php
                                     }
@@ -331,7 +333,7 @@ include 'dbconn.php';
                                     <div class="panel panel-primary shadow">
                                         <div class="panel-heading">
                                             <label>
-                                                Statestics Report
+                                                statistics Report
                                             </label>
                                         </div>
                                         <div class="panel-body">
