@@ -1,8 +1,8 @@
-Locate/Find Readme.pdf For more information.
+Download Stable Version 2 from Release Panel.
 
-SUGGESTIONS ARE WELCOME.
+Find Readme.pdf For more information.
 
-FEEL FREE TO CONTACT.
+SUGGESTIONS ARE WELCOME. FEEL FREE TO CONTACT.
 
 Introduction:
 
