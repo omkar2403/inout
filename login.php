@@ -59,8 +59,10 @@ session_start();
             </div>
             <?php
             if(isset($_POST['pass'])){
-                $user=$_POST['name'];
-                $pass=$_POST['pass'];
+                $user=trim($_POST['name']);
+                $pass=trim($_POST['pass']);
+                $user = mysql_real_escape_string($user);
+                $pass = mysql_real_escape_string($pass);
                 $loc=$_POST['loc'];
                 $query="SELECT * FROM log WHERE user='$user' AND pass='$pass'";
                 $result = mysql_query("$query", $link2) or die("Invalid query: " . mysql_error());
@@ -90,49 +92,10 @@ session_start();
             ?>
         </section>
         <footer class="foot" style="text-align: center; padding-top: 14px;">
-            Designed By <a target="_blank" href="https://omkar2403.github.io/its_me/" style="color: pink;`">Omkar Kakeru</a>
-            <!-- blank -->
+            Designed By <a target="_blank" href="https://omkar2403.github.io/its_me/" style="color: pink;`">Omkar Kakeru</a><br>
+            Powered By <a target="_blank" href="https://www.koha-community.org/" style="color: pink;`">Koha Community</a>
         </footer>
         <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>     
-        <!-- <script type="text/javascript">
-            function setCookie(cname, cvalue, exdays) {
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                var expires = "expires="+d.toUTCString();
-                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            }
-
-            function getCookie(cname) {
-                var name = cname + "=";
-                var ca = document.cookie.split(';');
-                for(var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            }
-
-            function checkCookie() {
-                var user = getCookie("valid");
-                if (user != "") {
-                    var a=0;
-                } else {
-                    var r = confirm("Click OK to Get Registered! It\'ll take 2 minutes.");
-                    if (r == true) {
-                        setCookie("valid", "user", 365);
-                        window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSd_Fyuz78V_fEqXs48m3sUKvIEuGuLlO1iFVXmw7pQZjEhwAg/viewform?embedded=true';
-                    } else {
-                        alert("You should Register to get support.");
-                    }
-                }
-            }
-
-        </script> -->                 
+        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>             
     </body>
 </html>

@@ -434,6 +434,7 @@ include 'dbconn.php';
     </body>
     <footer class="foot" style="text-align: center; padding-top: 14px;">
             Designed By <a target="_blank" href="https://omkar2403.github.io/its_me/" style="color: pink;">Omkar Kakeru</a>
+             Powered By <a target="_blank" href="https://www.koha-community.org/" style="color: pink;`">Koha Community</a>
             <!-- blank -->
         </footer>
 </html>
