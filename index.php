@@ -57,9 +57,9 @@ include "stats.php";
 		        		</div>
 			      	</article>
 			      	<?php
-			      	}else{
-			      		echo "";
-			      	}
+			     	 	}else{
+			     	 		echo "";
+			      		}
 			      	?>
 			    </div>
 			    <div class="col-xs-6 col-md-6 col-lg-6 text-center">
@@ -161,7 +161,7 @@ include "stats.php";
 			</div>
 		</section>
 		<footer class="foot" style="text-align: center; padding-top: 14px;">
-            Designed By <a target="_blank" href="https://omkar2403.github.io/its_me/" style="color: pink;">Omkar Kakeru</a>
+            Designed By <a target="_blank" href="https://omkar2403.github.io/its_me/" style="color: pink;">Omkar Kakeru</a><br>
              Powered By <a target="_blank" href="https://www.koha-community.org/" style="color: pink;`">Koha Community</a>
             <!-- blank -->
         </footer>
