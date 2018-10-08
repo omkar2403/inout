@@ -61,17 +61,17 @@ include "stats.php";
 			     	 		?>
 			     	 			<div class="card animated fadeInLeft">
 									<div class="img_container">
-										<!-- <img class="card-img-top img-responsive" src="img/300x400.png" alt="placeholder" /> -->
+										<img class="card-img-top img-responsive" src="img/300x400.png" alt="placeholder" />
 									</div>
 									<div class="card-block">
 										<div class="card-title text-info h4">
-											<-- Title Here -->
+											<!-- ** Title Here ** -->
 										</div>		        
 										<div class="h4" style="text-align: justify !important;">
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+											<!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of -->
 										</div>
 										<div class="h4 text-success">
-											<-- Note here -->
+											<!-- ** Note here ** -->
 										</div>
 									</div>
 								</div>
