@@ -278,7 +278,7 @@ include 'dbconn.php';
                                                     </div>
                                                     <input class="btn btn-fill btn-success" type="submit" name="view" value="View">
                                                     <input class="btn btn-fill btn-warning" formaction="excel.php" type="submit" name="report" value="Excel">
-                                                    <input class="btn btn-fill btn-info" formaction="pdfexport.php" formtarget="_blank" type="submit" name="report" value="PDF">
+                                                    <input class="btn btn-fill btn-info" formaction="pdfxport.php" formtarget="_blank" type="submit" name="report" value="PDF">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>

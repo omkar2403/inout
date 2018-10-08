@@ -11,7 +11,7 @@ include "stats.php";
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>IN-OUT SYSTEM</title>
+		<title>IN-OUT MGNT SYSTEM</title>
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="assets/css/main.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
@@ -58,7 +58,24 @@ include "stats.php";
 			      	</article>
 			      	<?php
 			     	 	}else{
-			     	 		echo "";
+			     	 		?>
+			     	 			<div class="card animated fadeInLeft">
+									<div class="img_container">
+										<!-- <img class="card-img-top img-responsive" src="img/300x400.png" alt="placeholder" /> -->
+									</div>
+									<div class="card-block">
+										<div class="card-title text-info h4">
+											<-- Title Here -->
+										</div>		        
+										<div class="h4" style="text-align: justify !important;">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+										</div>
+										<div class="h4 text-success">
+											<-- Note here -->
+										</div>
+									</div>
+								</div>
+			     	 		<?php
 			      		}
 			      	?>
 			    </div>
@@ -171,6 +188,7 @@ include "stats.php";
 		<script type="text/javascript">
 			$('article').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 			  $('article').addClass('delay fadeOutLeft');
+			  $('.blank-card').empty().append("")
 			});
 			$('span').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 			  	$('span').addClass('delay fadeOut');
@@ -180,7 +198,7 @@ include "stats.php";
 				}, 5200);
 				setTimeout(function(){
 					window.location.replace("/inout/index.php");
-				}, 10100);
+				}, 5700);
 			});
 		</script>
 	</body>
