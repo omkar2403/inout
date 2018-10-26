@@ -30,7 +30,7 @@
                     if($chk4['loc'] != $loc){
                         $sql = "UPDATE `lib`.`inout` SET `exit` = '$time', `status` = 'OUT' WHERE `inout`.`sl` = $exit[0];";
                         $result = mysql_query("$sql", $link2) or die("Invalid query: " . mysql_error());
-                        $sql = "INSERT INTO `lib`.`inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`) VALUES ('', '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '$libtime[0]', 'IN','$loc','$data1[3]');";
+                        $sql = "INSERT INTO `lib`.`inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`) VALUES (NULL, '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '$libtime[0]', 'IN','$loc','$data1[3]');";
                         $result = mysql_query("$sql", $link2) or die("Invalid query: " . mysql_error());
                         $e_name = $data1[0];
                         $d_status = "IN";
@@ -61,7 +61,7 @@
                 }
             } else {
                 if ($data1) {
-                    $sql = "INSERT INTO `lib`.`inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`) VALUES ('', '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '$libtime[0]', 'IN','$loc','$data1[3]');";
+                    $sql = "INSERT INTO `lib`.`inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`) VALUES (NULL, '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '$libtime[0]', 'IN','$loc','$data1[3]');";
                     $result = mysql_query("$sql", $link2) or die("Invalid query: " . mysql_error());
                     $e_name = $data1[0];
                     $d_status = "IN";
