@@ -31,7 +31,7 @@ include 'setup_stat.php'
                         <?php
                             if(isset($_POST['loc'])){
                                 $loc = $_POST['loc'];
-                                $query = "insert into `loc` values('','$loc');";
+                                $query = "INSERT INTO `loc` VALUES(NULL,'$loc');";
                                 $result = mysql_query("$query",$link2) or die("Invalid Query:".mysql_error());
                             }
                             if(isset($_POST['cname'])){
