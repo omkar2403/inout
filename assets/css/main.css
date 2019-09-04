@@ -13,6 +13,14 @@ section.head {
     padding-bottom: 30px;
 }
 
+.ml-auto{
+    margin-left: auto !important;
+}
+
+.mr-auto{
+    margin-right: auto !important;
+}
+
 .card,
 .form_main,
 .in_out_status div.status_block,

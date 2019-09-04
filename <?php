@@ -1,6 +1,0 @@
-<?php
-	$str = "Omkar";
-	echo md5($str);
-	echo "";
-	echo sh1($str);
-?>
