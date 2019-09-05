@@ -1,0 +1,155 @@
+.btn {
+	padding: 6px 12px !important;
+}    
+.main-panel > .content {
+     min-height: calc(100vh - 160px); 
+}
+
+.full-panel > .content {
+	min-height: calc(100vh - 80px);
+}
+
+.card-login{
+	margin-top: 200px;
+}
+
+#tb-wrapper {
+  position:relative;
+}
+#tb-scroll {
+  height:250px;
+  overflow:auto;  
+  margin-top:10px;
+}
+#tb-wrapper table {
+  width:100%;
+}
+
+.td-actions{
+  padding: 0px !important;
+  width: 50px;
+  height: 44px;
+}
+
+.chat_p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.chat_container {
+  /*border: 2px solid #dedede;*/
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.chat_darker {
+  /*border-color: #ccc;*/
+  background-color: #ff980085;
+}
+
+.chat_container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.chat_time-right {
+  float: right;
+  color: #000;
+}
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.label[href]:hover,
+.label[href]:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.label:empty {
+  display: none;
+}
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+.label-default {
+  background-color: #999;
+}
+.label-default[href]:hover,
+.label-default[href]:focus {
+  background-color: #808080;
+}
+.label-primary {
+  background-color: #428bca;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #3071a9;
+}
+.label-success {
+  background-color: #5cb85c;
+}
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #449d44;
+}
+.label-info {
+  background-color: #5bc0de;
+}
+.label-info[href]:hover,
+.label-info[href]:focus {
+  background-color: #31b0d5;
+}
+.label-warning {
+  background-color: #f0ad4e;
+}
+.label-warning[href]:hover,
+.label-warning[href]:focus {
+  background-color: #ec971f;
+}
+.label-danger {
+  background-color: #d9534f;
+}
+.label-danger[href]:hover,
+.label-danger[href]:focus {
+  background-color: #c9302c;
+}
+
+/*#tb-wrapper table thead th .text {
+  position:absolute;   
+  top:-30px;
+  z-index:2;
+  height:10px;
+  width:35%;
+}*/
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+@media screen and (max-width: 700px) {
+    .card-login{
+    	margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 380px){
+	.footer-menu{
+		display: none;
+	}
+}
+

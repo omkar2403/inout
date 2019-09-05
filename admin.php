@@ -3,19 +3,7 @@ session_start();
 $slib=$_SESSION['lib'];
 include 'dbconn.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <title>
-            <?php echo $slib; ?>
-        </title>
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="assets/css/main.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="assets/css/datepicker.css">
-        <link rel="stylesheet" href="assets/css/picker.css">
-        <link href="register/css/fresh-bootstrap-table.css" rel="stylesheet" />
-    </head>
+
     <body>
         <?php    
             if($_SESSION['id']=="admin" || $_SESSION['id']=="superuser") {
