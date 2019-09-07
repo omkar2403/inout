@@ -9,15 +9,16 @@
 
 	$name = trim($_POST['name']);
 	$pass = trim($_POST['pass']);
-	// $ltime = $_POST['ltime'];
-	// $fixtime=mktime(16, 00, 00); // 04:00 PM
-	// $fixtime=date("h:i A", $fixtime);
+	$loc = $_POST['loc'];
 
-	$fixtime = strtotime("16:00:00");
+	$ftime = strtotime("12:00:00");
+	$stime = strtotime("17:00:00");
 	$ltime = strtotime(now);
 
-	if($fixtime > $ltime){
+	if($ftime > $ltime){
 		$_SESSION['t'] = "Morning";
+	}elseif($stime > $ltime){
+		$_SESSION['t'] = "Noon";
 	}else{
 		$_SESSION['t'] = "Evening";
 	}
@@ -41,9 +42,31 @@
 			$role = mysqli_fetch_assoc(getDataById($conn, "roles", $user['role']));
 			$_SESSION['user_id'] = $user['id'];
 			$_SESSION['user_role'] = $role['rname'];
-			$_SESSION['user_name']	= $user['fname'];
 			$_SESSION['user_access'] = explode(';', $role['acc_code']);
-			header("Location: index.php?msg=".$_SESSION['t']);
+
+			if($loc != "Master"){
+        if($role['rname'] == "Admin"){
+          $_SESSION["id"] = $role['rname'];
+          $_SESSION["loc"] = $loc;
+          $_SESSION["lib"] = $loc;
+          header("Location: index.php?msg=".$_SESSION['t']);
+        }elseif ($role['rname'] == "User") {
+          $_SESSION["id"] = $role['rname'];
+          $_SESSION["loc"] = $loc;
+          header("Location: user.php");
+        }else{
+          header('location:login.php?msg=1');
+        }
+    	}elseif($loc == "Master"){
+        if ($role['rname'] == "Master" && $user['username'] == "master") {
+          $_SESSION["id"] = $role['rname'];
+          $_SESSION["loc"] = "Master";
+          $_SESSION["lib"] = "Master";
+          header("Location: index.php?msg=".$_SESSION['t']);
+        }else{
+          header('location:login.php?msg=1');
+        }
+	    }
 		}else{
 			header('location:login.php?msg=3');
 		}

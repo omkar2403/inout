@@ -5,6 +5,14 @@
      min-height: calc(100vh - 160px); 
 }
 
+.filter-option{
+  margin-top: 5px !important;
+}
+
+.bootstrap-select .btn.dropdown-toggle.select-with-transition{
+  margin-top: 13px !important;
+}
+
 .full-panel > .content {
 	min-height: calc(100vh - 80px);
 }

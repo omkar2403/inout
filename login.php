@@ -1,5 +1,8 @@
 <html lang="en" class="perfect-scrollbar-off">
   <head>
+    <?php
+      include './functions/dbconn.php';
+    ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Login</title>
@@ -10,6 +13,7 @@
     <link href="assets/css/material-dashboard.min.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css">
     <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
       <script src="assets/js/custom.js" type="text/javascript" ></script>
     <script src="assets/js/plugins/bootstrap-notify.js"></script>
@@ -53,6 +57,25 @@
                         <input type="password" name="pass" class="form-control" required="" placeholder="Password">
                       </div>
                     </span>
+                    <span class="bmd-form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">my_location</i>
+                          </span>
+                        </div>
+                       <select name="loc" required="" class="selectpicker" data-style="select-with-transition" title="Select Location">
+                        <?php
+                          $query = "SELECT * FROM LOC";
+                          $res = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
+                          while($row=mysqli_fetch_array($res)){
+                            echo "<option>".$row['1']."</option>";
+                          }
+                        ?>
+                        <option value="Master">Master</option>
+                       </select> 
+                      </div>
+                    </span>
                   </div>
                   <div class="card-footer justify-content-center">
                     <!-- <input type="hidden" name="ltime" value="<?php echo date("h:i A"); ?>"> -->
@@ -92,6 +115,8 @@
     <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
     <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
     <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
+    <script src="assets/js/material-dashboard.min.js?v=2.0.2" type="text/javascript"></script>
     <?php
     if($_GET['msg']==1){
       echo "<script type='text/javascript'>showNotification('top','right','Wrong Username/Password.', 'danger');</script>";
