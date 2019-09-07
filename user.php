@@ -3,8 +3,8 @@ session_start();
 if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
    header("location:login.php");
 }
-// include "./process/operations/main.php";
-// include "./process/operations/stats.php";
+include "./process/operations/main.php";
+include "./process/operations/stats.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -136,7 +136,7 @@ if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
 			    	</div>
 			    </div>
 			    <div class="col-xs-3 col-md-3 col-lg-3">
-			    	<a href="logout.php">
+			    	<a href="./functions/signout.php">
 				    	<div id="clockdate">
 							<div class="clockdate-wrapper">
 								<div id="clock"></div>
@@ -145,18 +145,18 @@ if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
 						</div>
 					</a>
 					<div class="in_out_status">
-						<div class="status_block h1 stats ">
+						<div class="status_block h1 stats">
 							<table class="stat_table">
 								<tr>
 									<span class="msgs">
 										<td class="tat"><i class="material-icons">arrow_back</i> Inside</td><td> <?php echo $tin[0]; ?></td>
 									</span>
 								</tr>
-								<tr>
+								<!-- <tr>
 									<span class="msgs">
 										<td class="tat"><i class="material-icons">face</i> Staff</td><td> <?php echo $staff[0]; ?></td>
 									</span>
-								</tr>
+								</tr> -->
 								<tr>
 									<span class="msgs">
 										<td class="tat"><i class="material-icons">face</i> Male</td><td> <?php echo $male[0]; ?></td>
@@ -198,7 +198,7 @@ if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
 					$(".inout").empty().append("___");
 				}, 5200);
 				setTimeout(function(){
-					window.location.replace("/inout/index.php");
+					window.location.replace("/inout/user.php");
 				}, 5700);
 			});
 		</script>

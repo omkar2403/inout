@@ -1,6 +1,6 @@
 <?php
 	function getsl($conn, $id, $table){
-		$query = "SELECT max($id) FROM $table";
+		$query = "SELECT MAX($id) FROM `$table`";
 		$result = mysqli_query($conn, $query);
 		$row = mysqli_fetch_array($result);
 		$id = $row[0];
