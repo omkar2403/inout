@@ -6,7 +6,7 @@ include 'dbconn.php';
 
     <body>
         <?php    
-            if($_SESSION['id']=="admin" || $_SESSION['id']=="superuser") {
+            if($_SESSION['id']=="admin" || $_SESSION['id']=="Master") {
         ?>
         <div class="wrapper">
             <div class="main-panel">
