@@ -98,5 +98,26 @@
 	  return $res = array($cc[0], $libtime[0]);
 	}
 
+	function getNews($conn){
+		$sql = "SELECT * FROM news ORDER BY id DESC LIMIT 5";
+		$result = mysqli_query($conn, $sql);
+		if(!$result){
+			echo "Can't retrieve data " . mysqli_error($conn);
+			exit;
+		}
+		return $result;
+	}
+
+	function checknews($conn, $loc){
+		$sql = "SELECT * From news WHERE loc = '".$loc."' AND status = 'Yes' ORDER BY id DESC";
+		$result = mysqli_query($conn, $sql);
+		if(!$result){
+			echo "Can't retrieve data " . mysqli_error($conn);
+			exit;
+		}
+		$result = mysqli_fetch_array($result);
+		return $result;
+	}
+
 
 ?>

@@ -5,6 +5,14 @@ if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
 }
 include "./process/operations/main.php";
 include "./process/operations/stats.php";
+include './functions/dbfunc.php';
+
+	$data = checknews($conn, "Temp");
+	if($data){
+		$news = true;
+	}else{
+		$news = false;
+	}
 ?>
 <!doctype html>
 <html lang="en">
@@ -62,17 +70,19 @@ include "./process/operations/stats.php";
 			     	 		?>
 			     	 			<div class="card animated fadeInLeft">
 									<div class="img_container">
+										 <?php if(!$news){ ?> 
 										<img class="card-img-top img-responsive" src="assets/img/300x400.png" alt="placeholder" />
+										 <?php } ?> 
 									</div>
 									<div class="card-block">
 										<div class="card-title text-info h4">
-											<!-- ** Title Here ** -->
+											 <?php echo $data['nhead']; ?> 
 										</div>		        
 										<div class="h4" style="text-align: justify !important;">
-											<!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of -->
+											 <?php echo $data['nbody']; ?> 
 										</div>
 										<div class="h4 text-success">
-											<!-- ** Note here ** -->
+									 		<?php echo $data['nfoot']; ?> 
 										</div>
 									</div>
 								</div>

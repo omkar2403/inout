@@ -1,6 +1,7 @@
 <?php
 	require '../../functions/dbconn.php';
 	require '../../functions/general.php';
+  $edate = date("20y-m-d");
 
 	if(isset($_POST['basic'])){
     $ccname = $_POST['cname'];
@@ -25,6 +26,36 @@
     if($result){
     	header("location:../../setup.php?msg=2");
     }
+  }
+
+  if(isset($_POST['addnews'])){
+    $nhead = $_POST['nhead'];
+    $nbody = $_POST['nbody'];
+    $nfoot = $_POST['nfoot'];
+    $loc = $_POST['loc'];
+
+    $query = "UPDATE `news` SET `status` = 'No' WHERE `status` = 'Yes' AND `loc` = '".$loc."'";
+    $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error($conn));
+
+    $id = getsl($conn, "id", "news");
+    $query = "INSERT INTO `news` (`id`, `edate`, `nhead`, `nbody`, `nfoot`, `status`,`loc`) VALUES ('".$id."', '".$edate."', '".$nhead."', '".$nbody."', '".$nfoot."', 'Yes','".$loc."')";
+    $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error($conn));
+    if($result){
+      header("location:../../notice.php?msg=1");
+    }
+  }
+
+  if(isset($_GET['nid']) && $_GET['status']){
+    $id = $_GET['nid'];
+    $status = $_GET['status'];
+    $loc = $_GET['loc'];
+    $active = ($status == "Yes") ? "No" : "Yes";
+    $query = "UPDATE `news` SET `status` = 'No' WHERE `status` = 'Yes' AND `loc` = '".$loc."'";
+    $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error($conn));
+
+    $query = "UPDATE `news` SET `status` = '".$active."' WHERE `id` = '".$id."'";
+    $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error($conn));
+    header('location:../../notice.php?msg=2');
   }
 
 ?>
