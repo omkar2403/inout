@@ -87,22 +87,6 @@
 		return $result;
 	}
 
-	function getAllRecords($conn, $pid){
-		$sql = "SELECT ddate, r_no, opdno, ('OPD Presc') as status FROM ptablet WHERE opdno = '$pid' GROUP BY ddate,r_no 
-			UNION ALL
-			SELECT ddate, billno, pid, ('OPD Invoice') as status FROM invoice WHERE pid = '$pid' GROUP BY ddate, billno 
-			UNION ALL
-			SELECT ddate, billno, pid, ('IPD Invoice') as status FROM ipdinvo WHERE pid = '$pid' GROUP BY ddate,billno 
-			UNION ALL
-			SELECT ddate, id, pid, ('EYE Presc') as status FROM eye WHERE pid = '$pid' ORDER BY ddate DESC";
-		$result = mysqli_query($conn, $sql);
-		if(!$result){
-			echo "Can't retrieve data " . mysqli_error($conn);
-			exit;
-		}
-		return $result;
-	}
-
 	function setupStats($conn){
 	  $query = "SELECT value FROM `setup` where var='cname'";
 	  $result = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error());
@@ -113,5 +97,6 @@
 
 	  return $res = array($cc[0], $libtime[0]);
 	}
+
 
 ?>
