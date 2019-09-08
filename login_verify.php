@@ -58,7 +58,7 @@
           header('location:login.php?msg=1');
         }
     	}elseif($loc == "Master"){
-        if ($role['rname'] == "Master" && $user['username'] == "master") {
+        if ($role['rname'] == "Master") {
           $_SESSION["id"] = $role['rname'];
           $_SESSION["loc"] = "Master";
           $_SESSION["lib"] = "Master";

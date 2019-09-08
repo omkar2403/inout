@@ -136,7 +136,7 @@
 		            <div class="col-md-12">
 		            	<div class="form-check">
 	                  <label class="form-check-label">
-	                    <input class="form-check-input" type="radio" name="rtype" value="Short"> Short Report
+	                    <input class="form-check-input" type="radio" name="rtype" checked="" value="Short"> Short Report
 	                    <span class="form-check-sign">
 	                      <span class="check"></span>
 	                    </span>

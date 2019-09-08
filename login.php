@@ -90,10 +90,10 @@
               <nav class="float-left footer-menu">
                 <ul>
                   <li>
-                    <a href="#">Sai Hospital</a>
+                    <a href="https://github.com/omkar2403/inout/">In Out System</a>
                   </li>
                   <li>
-                    <a href="#">About Us</a>
+                    <a href="https://www.koha-community.org/">Powered By KOHA Community</a>
                   </li>
                   <li>
                     <!-- <a href="#">Blog</a> -->
@@ -105,7 +105,7 @@
               </nav>
               <div class="copyright float-right">©
                 <script>document.write(new Date().getFullYear())</script>, made with <i class="material-icons">favorite</i> by
-                  <a href="#" target="_blank">PLAYTECH</a> for a better web.
+                  <a href="https://omkar2403.github.io/its_me/" target="_blank">Omkar Kakeru</a> for a better web.
               </div>
             </div>
           </footer>

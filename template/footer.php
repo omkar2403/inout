@@ -2,13 +2,12 @@
           <div class="container-fluid">
             <nav class="float-left">
               <ul>
-                <li><a href="#">Sai Hospital</a></li>
-                <li><a href="#">About Us</a></li>
-                <!-- <li><a href="#"></a></li> -->
+                <li><a href="https://github.com/omkar2403/inout/" target="_blank">In Out Management System</a></li>
+                <li><a href="https://www.koha-community.org/" target="_blank">Powered By KOHA Community</a></li>
               </ul>
             </nav>
             <div class="copyright float-right">©<script>document.write(new Date().getFullYear())</script>, made with <i class="material-icons">favorite</i> by
-              <a href="#" target="_blank">PLAYTECH</a> for a better web.
+              <a href="https://omkar2403.github.io/its_me/" target="_blank">Omkar Kakeru</a> for a better web.
             </div>
           </div>
         </footer>               
@@ -33,8 +32,6 @@
     <script src="assets/js/plugins/bootstrap-selectpicker.js"></script> 
     <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
     <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script> 
-    <!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
-    <!-- <script src="assets/js/plugins/jquery.dataTables.min.js"></script>  -->
     <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
     <script src="assets/js/plugins/bootstrap-tagsinput.js"></script> 
     <!-- Plugin for Fileupload, full documentation here: www.jasny.net/bootstrap/javascript/#fileinput -->
@@ -49,15 +46,10 @@
     <script src="assets/js/core/core.js"></script>
     <!-- Library for adding dinamically elements -->
     <script src="assets/js/plugins/arrive.min.js"></script>
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <!-- <script async="" defer="" src="assets/core/buttons.js"></script> -->
     <!-- Chartist JS -->
     <script src="assets/js/plugins/chartist.min.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <!-- <script src="assets/js/material-dashboard.js?v=2.0.2" type="text/javascript"></script> -->
     <script src="assets/js/material-dashboard.min.js?v=2.0.2" type="text/javascript"></script>
-    <!-- Sharrre libray -->
-    <!-- <script src="assets/demo/jquery.sharrre.js"></script> -->
     <!-- DATE TIME PICKER AND SLIDERS -->
     <script>
       $(document).ready(function(){

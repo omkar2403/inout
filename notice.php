@@ -2,7 +2,7 @@
 	session_start();
 	// ob_start(ob_gzhandler);
 	$title = "Notice";
-	$acc_code = "";
+	$acc_code = "N01";
 	require "./functions/access.php";
 	require_once "./template/header.php";
 	require_once "./template/sidebar.php";

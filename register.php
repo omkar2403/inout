@@ -2,7 +2,7 @@
 	session_start();
 	// ob_start(ob_gzhandler);
 	$title = "Entry Register";
-	$acc_code = "";
+	$acc_code = "U03";
 	$slib = $_SESSION['lib'];
 	$table = true;
 	require "./functions/access.php";

@@ -1,4 +1,4 @@
-Download Stable Version 2 from Release Panel.
+Download Stable Version 3 from Release Panel.
 
 Find Readme.pdf For more information.
 

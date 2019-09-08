@@ -44,7 +44,7 @@
 			                  	<div class="form-group bmd-form-group">
 			                     	<div class="form-check">
 									  <label class="form-check-label">
-									    <input class="form-check-input" type="checkbox" name="code[]" value="A01" <?php if(in_array("A01",$section)) { ?> checked="checked" <?php } ?> > Admin Dashboard
+									    <input class="form-check-input" type="checkbox" name="code[]" value="S01" <?php if(in_array("S01",$section)) { ?> checked="checked" <?php } ?> > Setup
 									    <span class="form-check-sign">
 									      <span class="check"></span>
 									    </span>
@@ -60,7 +60,7 @@
 									</div>
 									<div class="form-check">
 									  <label class="form-check-label">
-									    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+									    <input class="form-check-input" type="checkbox" name="code[]" value="R01" <?php if(in_array("R01",$section)) { ?> checked="checked" <?php } ?> > Reports
 									    <span class="form-check-sign">
 									      <span class="check"></span>
 									    </span>
@@ -73,7 +73,7 @@
 			                  	<div class="form-group bmd-form-group">
 			                     	<div class="form-check">
 									  <label class="form-check-label">
-									    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+									    <input class="form-check-input" type="checkbox" name="code[]" value="N01" <?php if(in_array("N01",$section)) { ?> checked="checked" <?php } ?> > Notice
 									    <span class="form-check-sign">
 									      <span class="check"></span>
 									    </span>
@@ -81,7 +81,7 @@
 									</div>
 									<div class="form-check">
 									  <label class="form-check-label">
-									    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+									    <input class="form-check-input" type="checkbox" name="code[]" value="U02" <?php if(in_array("U02",$section)) { ?> checked="checked" <?php } ?> > Today
 									    <span class="form-check-sign">
 									      <span class="check"></span>
 									    </span>
@@ -89,7 +89,7 @@
 									</div>
 									<div class="form-check">
 									  <label class="form-check-label">
-									    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+									    <input class="form-check-input" type="checkbox" name="code[]" value="U03" <?php if(in_array("U03",$section)) { ?> checked="checked" <?php } ?> > Register
 									    <span class="form-check-sign">
 									      <span class="check"></span>
 									    </span>

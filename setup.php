@@ -3,7 +3,7 @@
 	// ob_start(ob_gzhandler);
 	$title = "Setup";
 	// $acc_code = "S01";
-	$acc_code = "";
+	$acc_code = "S01";
 	require "./functions/access.php";
 	require_once "./template/header.php";
 	require_once "./template/sidebar.php";

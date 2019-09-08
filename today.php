@@ -2,8 +2,7 @@
 	session_start();
 	// ob_start(ob_gzhandler);
 	$title = "Today's Entry";
-	// $acc_code = "T01";
-	$acc_code = "";
+	$acc_code = "U02";
 	$table = true;
 	$slib = $_SESSION['lib'];
 

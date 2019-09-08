@@ -70,9 +70,9 @@
 												            <a rel="tooltip" href="edit_user.php?edituser=<?php echo $user['id']; ?>" class="btn btn-success btn-link" title="Edit">
 												              <i class="material-icons">edit</i>
 												            </a>
-												            <a rel="tooltip" href="process/admin/usr_process.php?deluser=<?php echo $user['id']; ?>" class="btn btn-danger btn-link" title="Delete">
+												            <!-- <a rel="tooltip" href="process/admin/usr_process.php?deluser=<?php echo $user['id']; ?>" class="btn btn-danger btn-link" title="Delete">
 												              <i class="material-icons">close</i>
-												            </a>
+												            </a> -->
 											            </td>
 									          		</tr>
 									          		<?php
@@ -148,7 +148,7 @@
 											            <th class="text-center">ID</th>
 											            <th>Role</th>
 											            <th>Description</th>
-											            <th class="text-left">Actions</th>
+											            <!-- <th class="text-left">Actions</th> -->
 								          			</tr>
 								        		</thead>
 								        		<tbody>
@@ -160,14 +160,14 @@
 											            <td class="text-center"><?php echo $role['id']; ?></td>
 											            <td><?php echo $role['rname']; ?></td>
 											            <td><?php echo $role['rdesc']; ?></td>
-											            <td class="text-center td-actions">
+											            <!-- <td class="text-center td-actions">
 												            <a rel="tooltip" href="edit_role.php?editrole=<?php echo $role['id']; ?>" class="btn btn-success btn-link" title="Edit">
 												              <i class="material-icons">edit</i>
 												            </a>
 												            <a rel="tooltip" href="process/admin/usr_process.php?delrole=<?php echo $role['id']; ?>" class="btn btn-danger btn-link" title="Delete">
 												              <i class="material-icons">close</i>
 												            </a>
-											            </td>
+											            </td> -->
 									          		</tr>
 									          		<?php
 									          			}
@@ -178,7 +178,7 @@
 								  	</div>
 								</div>
 		      				</div>
-		      				<div class="col-md-6 col-sm-12">
+		      				<!-- <div class="col-md-6 col-sm-12">
 						        <div class="card">
 						          	<div class="card-header card-header-rose card-header-icon">
 						              	<div class="card-icon">
@@ -194,7 +194,6 @@
 						                  	</div>
 						                  	<div class="form-group bmd-form-group">
 						                      	<label class="bmd-label-floating">Descripton</label>
-						                      	<!-- <input type="text" class="form-control" name="fname"> -->
 						                      	<textarea class="form-control" rows="3" required="" name="r_desc"></textarea>
 						                  	</div>
 						                  	<div class="row">
@@ -203,7 +202,7 @@
 								                  	<div class="form-group bmd-form-group">
 								                     	<div class="form-check">
 																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="A01"> Admin Dashboard
+																			    <input class="form-check-input" type="checkbox" name="code[]" value="S01"> Setup
 																			    <span class="form-check-sign">
 																			      <span class="check"></span>
 																			    </span>
@@ -219,7 +218,7 @@
 																			</div>
 																			<div class="form-check">
 																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+																			    <input class="form-check-input" type="checkbox" name="code[]" value="R01"> Reports
 																			    <span class="form-check-sign">
 																			      <span class="check"></span>
 																			    </span>
@@ -232,7 +231,7 @@
 								                  	<div class="form-group bmd-form-group">
 								                     	<div class="form-check">
 																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+																			    <input class="form-check-input" type="checkbox" name="code[]" value="N01"> Notice
 																			    <span class="form-check-sign">
 																			      <span class="check"></span>
 																			    </span>
@@ -240,7 +239,7 @@
 																			</div>
 																			<div class="form-check">
 																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+																			    <input class="form-check-input" type="checkbox" name="code[]" value="U02"> Today
 																			    <span class="form-check-sign">
 																			      <span class="check"></span>
 																			    </span>
@@ -248,219 +247,7 @@
 																			</div>
 																			<div class="form-check">
 																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-								                  	</div>
-								                  </div>
-								                </div>
-						                  	<div class="row">
-						                  		<div class="col-md-6 col-sm-12">
-						                  			<h3>Patient</h3>
-								                  	<div class="form-group bmd-form-group">
-								                     	<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="R01"> Admission
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-								                  	</div>
-								                  </div>
-								                  <div class="col-md-6 col-sm-12">
-						                  			<h3>Doctor</h3>
-								                  	<div class="form-group bmd-form-group">
-								                  		<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="D01"> Doctor Dashboard
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="D02"> Medicine
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="D03"> OPD Register
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="D04"> IPD Register
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-								                     	<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="D05"> Search Patient
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="D02"> Employee Management
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-								                  	</div>
-								                  </div>
-								                </div>
-								                <div class="row">
-						                  		<div class="col-md-6 col-sm-12">
-						                  			<h3>Services</h3>
-								                  	<div class="form-group bmd-form-group">
-								                     	<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="B01"> Department Management
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-								                  	</div>
-								                  </div>
-								                  <div class="col-md-6 col-sm-12">
-						                  			<h3>Inventory</h3>
-								                  	<div class="form-group bmd-form-group">
-								                     	<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="G01"> Inventory Panel
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="G02"> Store Management
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="G03" > Store Access
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-								                  	</div>
-								                  </div>
-								                </div>
-								                <div class="row">
-						                  		<div class="col-md-6 col-sm-12">
-						                  			<h3>Insurance</h3>
-								                  	<div class="form-group bmd-form-group">
-								                     	<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value="F01"> Manage Insurance
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-								                  	</div>
-								                  </div>
-								                  <div class="col-md-6 col-sm-12">
-						                  			<h3>Accounts</h3>
-								                  	<div class="form-group bmd-form-group">
-								                     	<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
-																			    <span class="form-check-sign">
-																			      <span class="check"></span>
-																			    </span>
-																			  </label>
-																			</div>
-																			<div class="form-check">
-																			  <label class="form-check-label">
-																			    <input class="form-check-input" type="checkbox" name="code[]" value=""> First Checkbox
+																			    <input class="form-check-input" type="checkbox" name="code[]" value="U03"> Register
 																			    <span class="form-check-sign">
 																			      <span class="check"></span>
 																			    </span>
@@ -478,7 +265,7 @@
 						           		</form>
 						          	</div>
 						        </div>
-						    </div>
+						    </div> -->
 		      			</div>
 			      	</div>
 		  		</div>

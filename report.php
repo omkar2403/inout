@@ -2,8 +2,7 @@
 	session_start();
 	// ob_start(ob_gzhandler);
 	$title = "Report";
-	$acc_code = "";
-	// $acc_code = "R02";
+	$acc_code = "R01";
 	$table = true;
 	require "./functions/access.php";
 	require_once "./template/header.php";
@@ -296,7 +295,7 @@
 					    <div class="card-icon">
 					      <i class="material-icons">assignment</i>
 					    </div>
-					    <h4 class="card-title">Detailed <?php echo $title; ?></h4>
+					    <h4 class="card-title">Statistical Reports</h4>
 					  </div>
 					  <div class="card-body">
 					  	<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
@@ -348,7 +347,9 @@
 	                      $sql = "SELECT count(sl)  FROM `inout` WHERE `date` = '$idate' AND `loc`='$slib'";
 	                      $result = mysqli_query($conn, $sql) or die("Invalid query3: " . mysqli_error($conn));
 	                      $visit = mysqli_fetch_row($result);
-	                      echo "<tr><td>".$idate."</td><td> ".$male[1]."</td><td>".$male[0]." </td><td>".$female['0']."</td><td> ".$visit['0']."</td><td>".$slib."</td></tr>"; 
+	                      if($visit[0] != '0'){
+	                      	echo "<tr><td>".$idate."</td><td> ".$male[1]."</td><td>".$male[0]." </td><td>".$female['0']."</td><td> ".$visit['0']."</td><td>".$slib."</td></tr>"; 
+	                    	}
 	                      $idate=date_create("$idate");
 	                      date_add($idate,date_interval_create_from_date_string("1 days"));
 	                      $idate = date_format($idate,"Y-m-d");
