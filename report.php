@@ -85,7 +85,7 @@
       $result = mysqli_query($conn, $sql) or die("Invalid query: " . mysqli_error($conn));
       while ($row = mysqli_fetch_array($result)) {
         $secs = strtotime($row[1]) - strtotime("00:00:00");
-        $query = "INSERT INTO `inout`.`tmp1` (`date`, `secs`) VALUES ('".$row[0]."', '".$secs."');";
+        $query = "INSERT INTO `tmp1` (`date`, `secs`) VALUES ('".$row[0]."', '".$secs."');";
         $res = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error($conn));
       }
       $sql = "SELECT date, DAYNAME(`DATE`), SUM(`secs`) FROM `tmp1` GROUP BY date";

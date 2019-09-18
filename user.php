@@ -7,7 +7,7 @@ include "./process/operations/main.php";
 include "./process/operations/stats.php";
 include './functions/dbfunc.php';
 
-	$data = checknews($conn, "Temp");
+	$data = checknews($conn, $_SESSION['loc']);
 	if($data){
 		$news = true;
 	}else{
