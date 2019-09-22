@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Login</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
-    <!--     Fonts and icons     -->
     <link href="assets/css/material-icons.css" rel="stylesheet" >
-    <!-- CSS Files -->
     <link href="assets/css/material-dashboard.min.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -24,7 +22,6 @@
   <body class="off-canvas-sidebar" cz-shortcut-listen="true">        
     <div class="wrapper wrapper-full-page">
       <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('assets/img/login.jpg'); background-size: cover; background-position: top center;">
-    <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
           <div class="container">
             <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
               <form class="form" method="POST" action="login_verify.php">
@@ -78,8 +75,7 @@
                     </span>
                   </div>
                   <div class="card-footer justify-content-center">
-                    <!-- <input type="hidden" name="ltime" value="<?php echo date("h:i A"); ?>"> -->
-                    <input type="submit" value="Lets Go" name="submit" class="btn btn-rose btn-link btn-lg">
+                    <input type="submit" value="Login" name="submit" class="btn btn-rose btn-link btn-lg">
                   </div>
                 </div>
               </form>
@@ -94,12 +90,6 @@
                   </li>
                   <li>
                     <a href="https://www.koha-community.org/">Powered By KOHA Community</a>
-                  </li>
-                  <li>
-                    <!-- <a href="#">Blog</a> -->
-                  </li>
-                  <li>
-                    <!-- <a href="#">Licenses</a> -->
                   </li>
                 </ul>
               </nav>

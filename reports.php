@@ -14,7 +14,7 @@
     $_SESSION["lib"] = $_POST['slib'];
     header("location:reports.php");
   }
-  $slib = $_SESSION['lib'];
+  $slib = $_SESSION['loc'];
 ?>
 <!-- MAIN CONTENT START -->
 <div class="content" style="min-height: calc(100vh - 160px);">

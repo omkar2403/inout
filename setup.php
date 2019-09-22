@@ -46,6 +46,14 @@
 	                </div>
 	              </div>
 	            </div>
+	            <div class="row">
+	              <div class="col-md-12">
+	                <div class="form-group">
+	                  <label class="bmd-label-floating">What do you call your Univercity Number</label>
+	                  <input type="text" name="noname" class="form-control" value="<?php echo $res[2]; ?>">
+	                </div>
+	              </div>
+	            </div>
 	            <input type="submit" value="Submit" name="basic" class="btn btn-success">
 	            <input type="reset" value="Clear" class="btn btn-warning">
 	          </form>
@@ -109,6 +117,16 @@
             <div class="row">
             	<div class="col-md-12">
             		<h4><?php echo $res[1]; ?></h4>
+            	</div>
+            </div>
+            <div class="row">
+            	<div class="col-md-12">
+            		<h3>What do you call your Univercity Number?</h3>
+            	</div>
+            </div>
+            <div class="row">
+            	<div class="col-md-12">
+            		<h4><?php echo $res[2]; ?></h4>
             	</div>
             </div>
 	        </div>

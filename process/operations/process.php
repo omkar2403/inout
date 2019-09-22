@@ -12,6 +12,10 @@
     $query = "UPDATE `setup` SET `value` = '$libtime' WHERE `setup`.`var` = 'libtime'";
     $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
 
+    $noname = $_POST['noname'];
+    $query = "UPDATE `setup` SET `value` = '$noname' WHERE `setup`.`var` = 'noname'";
+    $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
+
     if($result){
     	header("location:../../setup.php?msg=1");
     }

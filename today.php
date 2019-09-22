@@ -4,7 +4,7 @@
 	$title = "Today's Entry";
 	$acc_code = "U02";
 	$table = true;
-	$slib = $_SESSION['lib'];
+	$slib = $_SESSION['loc'];
 
 	require "./functions/access.php";
 	require_once "./template/header.php";

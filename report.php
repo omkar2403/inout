@@ -10,7 +10,7 @@
 	require "functions/dbconn.php";
 	require "functions/dbfunc.php";
 	require "functions/general.php";	
-	$slib = $_SESSION['lib'];
+	$slib = $_SESSION['loc'];
 ?>
 <!-- MAIN CONTENT START -->
 <?php

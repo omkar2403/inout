@@ -39,6 +39,12 @@
 
 	if($name == $user['username'] && $pass == $user['pass'] ){
 		if($user['active']==1){
+			//initialise the basic data from setup
+			$query = "SELECT * from setup";
+			$setupArray = mysqli_query($conn, $query);
+			while($row = mysqli_fetch_array($setupArray)){
+				$setup[$row[0]] = $row[1];
+			}
 			$role = mysqli_fetch_assoc(getDataById($conn, "roles", $user['role']));
 			$_SESSION['user_id'] = $user['id'];
 			$_SESSION['user_role'] = $role['rname'];
@@ -48,11 +54,14 @@
         if($role['rname'] == "Admin"){
           $_SESSION["id"] = $role['rname'];
           $_SESSION["loc"] = $loc;
-          $_SESSION["lib"] = $loc;
+          $_SESSION["lib"] = $setup['libname'];
           header("Location: index.php?msg=".$_SESSION['t']);
         }elseif ($role['rname'] == "User") {
           $_SESSION["id"] = $role['rname'];
           $_SESSION["loc"] = $loc;
+          $_SESSION["lib"] = $setup['cname'];
+          $_SESSION["libtime"] = $setup['libtime'];
+          $_SESSION["noname"] = $setup['noname'];
           header("Location: user.php");
         }else{
           header('location:login.php?msg=1');

@@ -1,5 +1,13 @@
 <?php
 session_start();
+if (!isset($_SESSION['CREATED'])) {
+    $_SESSION['CREATED'] = time();
+} else if (time() - $_SESSION['CREATED'] > 7200) {
+    // session started more than 120 minutes ago
+    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
+    $_SESSION['CREATED'] = time();  // update creation time
+}
+
 if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
    header("location:login.php");
 }
@@ -94,7 +102,7 @@ include './functions/dbfunc.php';
 			    	<div class="form_main">
 			    		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
 						    <div class="form-group">
-						        <div class="h2 t-shadow">USN</div>
+						        <div class="h2 t-shadow"><?php echo $_SESSION['noname']; ?></div>
 						        <input type="text" name="id" class="form-control usn_input" placeholder="" value="" autofocus="autofocus">
 						    </div>    
 						</form>
@@ -118,7 +126,7 @@ include './functions/dbfunc.php';
 							<?php
 								if ($msg == "1") {
 									?> <span class="animated flash"> <?php 
-								    echo "<span class='text-primary'>Welcome to ".$_SESSION['loc'].".<br>Your USN is: " . $usn . "<br>Entry time is: " . date('g:i A', strtotime($time))."</span>";
+								    echo "<span class='text-primary'>Welcome to ".$_SESSION['loc'].".<br>Your ".$_SESSION['noname']." is: " . $usn . "<br>Entry time is: " . date('g:i A', strtotime($time))."</span>";
 								    ?> </span> <?php
 								} elseif ($msg == "2") {
 								    # code...
@@ -128,7 +136,7 @@ include './functions/dbfunc.php';
 								} elseif ($msg == "3") {
 								    # code...
 								    ?> <span class="animated flash"> <?php 
-								    echo "<span class='text-danger'>Invalid USN number.<br> Contact Librarian for more details.</span>";
+								    echo "<span class='text-danger'>Invalid or Expired ".$_SESSION['noname']."<br> Contact Librarian for more details.</span>";
 								    ?> </span> <?php
 								} elseif ($msg == "4") {
 								    # code...
@@ -162,11 +170,6 @@ include './functions/dbfunc.php';
 										<td class="tat"><i class="material-icons">arrow_back</i> Inside</td><td> <?php echo $tin[0]; ?></td>
 									</span>
 								</tr>
-								<!-- <tr>
-									<span class="msgs">
-										<td class="tat"><i class="material-icons">face</i> Staff</td><td> <?php echo $staff[0]; ?></td>
-									</span>
-								</tr> -->
 								<tr>
 									<span class="msgs">
 										<td class="tat"><i class="material-icons">face</i> Male</td><td> <?php echo $male[0]; ?></td>
@@ -182,6 +185,18 @@ include './functions/dbfunc.php';
 										<td class="tat"><i class="material-icons">autorenew</i> Visit</td><td> <?php echo $visit[0]; ?></td>
 									</span>
 								</tr>
+								<?php
+									while($row = mysqli_fetch_array($extraCount)){
+								?>
+								<tr>
+									<span class="msgs">
+										<td class="tat"><i class="material-icons">add</i> <?php echo $row[0]; ?></td><td> <?php echo $row[1]; ?></td>
+									</span>
+								</tr>
+								<?php
+									//end of while
+									}
+								?>
 							</table>
 						</div>
 					</div>

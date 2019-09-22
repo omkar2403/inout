@@ -3,7 +3,7 @@
 	// ob_start(ob_gzhandler);
 	$title = "Entry Register";
 	$acc_code = "U03";
-	$slib = $_SESSION['lib'];
+	$slib = $_SESSION['loc'];
 	$table = true;
 	require "./functions/access.php";
 	require_once "./template/header.php";

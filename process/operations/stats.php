@@ -13,7 +13,6 @@
   $query = "SELECT count(sl) FROM `inout` WHERE date='$date' and status='IN' and loc='$loc'";
   $result = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error());
   $tin = mysqli_fetch_row($result);
-  // $query = "SELECT count(sl) FROM `inout` WHERE date='$date' and status='IN' and loc='$loc' and cc='$cc[0]'";
-  // $result = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error());
-  // $staff = mysqli_fetch_row($result);
+  $query = "SELECT cc, COUNT(sl) FROM `inout` GROUP BY cc;";
+  $extraCount = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error());
 ?>

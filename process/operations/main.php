@@ -10,12 +10,23 @@
         $date = date('Y-m-d');
         $time = date('H:i:s');
         error_reporting(E_ALL);
-        $sql = "SELECT CONCAT(title,' ',firstname,' ',surname) AS surname,borrowernumber,sex,categorycode FROM borrowers WHERE cardnumber='$usn'";
+        //patron data fetching
+        // $sql = "SELECT CONCAT(title,' ',firstname,' ',surname) AS surname,borrowernumber,sex,categorycode,branchcode,sort1,sort2 FROM borrowers WHERE cardnumber='$usn'";
+        $sql = "SELECT CONCAT(title,' ',firstname,' ',surname) AS surname,borrowernumber,sex,categorycode,branchcode,sort1,sort2,mobile,email FROM borrowers WHERE cardnumber='$usn' AND dateexpiry > '$date'";
         $result = mysqli_query($koha, $sql) or die("Invalid query: 2" . mysqli_error());
         $data1 = mysqli_fetch_row($result);
+        //image fetching
         $sql = "SELECT imagefile FROM patronimage WHERE borrowernumber = '$data1[1]'";
         $result = mysqli_query($koha, $sql);
         $data2 = mysqli_fetch_row($result);
+        //Patron category code fetching
+        $sql = "SELECT description FROM categories WHERE categorycode = '$data1[3]'";
+        $result = mysqli_query($koha, $sql);
+        $data3 = mysqli_fetch_row($result);
+        //Branch information fetching
+        $sql = "SELECT branchname FROM branches WHERE branchcode = '$data1[4]'";
+        $result = mysqli_query($koha, $sql);
+        $data4 = mysqli_fetch_row($result);
         if ($data1) {
             $sql = "SELECT *  FROM `inout` WHERE `cardnumber` = '$usn' AND `date` = '$date' AND `status` = 'IN'";
             $result = mysqli_query($conn, $sql) or die("Invalid query: 3" . mysqli_error());
@@ -32,7 +43,7 @@
                         $sql = "UPDATE `inout` SET `exit` = '$time', `status` = 'OUT' WHERE `sl` = $exit[0];";
                         $result = mysqli_query($conn, $sql) or die("Invalid query: 6" . mysqli_error());
                         $sl = getsl($conn, "sl", "inout");
-                        $sql = "INSERT INTO `inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`) VALUES ('$sl', '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '$libtime[0]', 'IN','$loc','$data1[3]');";
+                        $sql = "INSERT INTO `inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`,`branch`,`sort1`,`sort2`,`email`,`mob`) VALUES ('$sl', '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '".$_SESSION['libtime']."', 'IN','$loc','$data3[0]','$data4[0]','$data1[5]','$data1[6]','$data1[8]','$data1[7]');";
                         $result = mysqli_query($conn, $sql) or die("Invalid query: 7" . mysqli_error());
                         $e_name = $data1[0];
                         $d_status = "IN";
@@ -64,7 +75,7 @@
             } else {
                 if ($data1) {
                     $sl = getsl($conn, "sl", "inout");
-                    $sql = "INSERT INTO `inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`) VALUES ('$sl', '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '$libtime[0]', 'IN','$loc','$data1[3]');";
+                    $sql = "INSERT INTO `inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`,`branch`,`sort1`,`sort2`,`email`,`mob`) VALUES ('$sl', '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '".$_SESSION['libtime']."', 'IN','$loc','$data3[0]','$data4[0]','$data1[5]','$data1[6]','$data1[8]','$data1[7]');";
                     $result = mysqli_query($conn, $sql) or die("Invalid query: 11" . mysqli_error($conn));
                     $e_name = $data1[0];
                     $d_status = "IN";

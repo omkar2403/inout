@@ -94,8 +94,11 @@
 	  $query = "SELECT value FROM `setup` where var='libtime'";
 	  $result = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error());
 	  $libtime = mysqli_fetch_row($result);
+	  $query = "SELECT value FROM `setup` where var='noname'";
+	  $result = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error());
+	  $noname = mysqli_fetch_row($result);
 
-	  return $res = array($cc[0], $libtime[0]);
+	  return $res = array($cc[0], $libtime[0], $noname[0]);
 	}
 
 	function getNews($conn){
