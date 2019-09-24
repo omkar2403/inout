@@ -12,7 +12,7 @@
 	<div class="container-fluid">
 	  <div class="row">
 	    <div class="col-md-12">
-	       Welcome <?php echo $_SESSION['id']; ?>..
+	       Welcome <?php echo $_SESSION['user_name']; ?>..
 	    </div>
 	  </div>              
 	</div>
@@ -20,13 +20,13 @@
 <!-- MAIN CONTENT ENDS -->
 <?php
     if($_GET['msg']=="Evening"){
-      echo "<script type='text/javascript'>showNotification('top','right','Good Evening ".$_SESSION['id']."', 'info');</script>";
+      echo "<script type='text/javascript'>showNotification('top','right','Good Evening ".$_SESSION['user_name']."', 'info');</script>";
     }
     if($_GET['msg']=="Morning"){
-      echo "<script type='text/javascript'>showNotification('top','right','Good Morning ".$_SESSION['id']."', 'info');</script>";
+      echo "<script type='text/javascript'>showNotification('top','right','Good Morning ".$_SESSION['user_name']."', 'info');</script>";
     }
     if($_GET['msg']=="Noon"){
-      echo "<script type='text/javascript'>showNotification('top','right','Good After Noon ".$_SESSION['id']."', 'info');</script>";
+      echo "<script type='text/javascript'>showNotification('top','right','Good After Noon ".$_SESSION['user_name']."', 'info');</script>";
     }
 	require_once "./template/footer.php";
 	ob_end_flush();

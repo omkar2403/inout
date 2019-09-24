@@ -48,6 +48,7 @@
 			$role = mysqli_fetch_assoc(getDataById($conn, "roles", $user['role']));
 			$_SESSION['user_id'] = $user['id'];
 			$_SESSION['user_role'] = $role['rname'];
+			$_SESSION['user_name'] = $user['fname'];
 			$_SESSION['user_access'] = explode(';', $role['acc_code']);
 
 			if($loc != "Master"){

@@ -13,7 +13,7 @@
           </div>
           <div class="user-info">
               <a data-toggle="collapse" href="#collapseExample" class="username">
-                  <span><?php echo $_SESSION['id']; ?></span>
+                  <span><?php echo $_SESSION['user_name']; ?></span>
               </a>
           </div>
         </div>
