@@ -31,7 +31,9 @@
 			          <tr>
 			          	<th>Sl</th>  
                   <th>USN</th>  
-                  <th>Name</th>  
+                  <th>Name</th> 
+                  <th>Email</th> 
+                  <th>Mobile</th>
                   <th>Status</th>
                   <th>Entry</th>
                   <th>Exit</th>
@@ -50,6 +52,8 @@
                 		<td><?php echo $row['sl']; ?></td>
                     <td><?php echo $row['cardnumber']; ?></td>
                     <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['mob']; ?></td>
                   	<?php 
                   		if($row['status'] == "IN") 
                   			echo "<td class='btn-success text-center'>".$row['status']."</td>"; 
@@ -65,6 +69,8 @@
 			        </tbody>
 			        <tfoot>
 		            <tr>
+	                <th></th>
+	                <th></th>
 	                <th></th>
 	                <th></th>
 	                <th></th>

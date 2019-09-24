@@ -30,7 +30,9 @@
 			          <tr>
 			          	<th>Sl</th>  
                   <th>USN</th>  
-                  <th>Name</th>  
+                  <th>Name</th> 
+                  <th>Email</th> 
+                  <th>Mobile</th>
                   <th>Date</th>
                   <th>Entry</th>
                   <th>Exit</th>
@@ -49,6 +51,8 @@
                 		<td><?php echo $row['sl']; ?></td>
                     <td><?php echo $row['cardnumber']; ?></td>
                     <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['mob']; ?></td>
                     <td><?php echo $row['date']; ?></td>
                   	<td><?php echo $row['entry']; ?></td>
                   	<td><?php echo $row['exit']; ?></td>
@@ -59,6 +63,8 @@
 			        </tbody>
 			        <tfoot>
 		            <tr>
+	                <th></th>
+	                <th></th>
 	                <th></th>
 	                <th></th>
 	                <th></th>

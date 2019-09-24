@@ -1,4 +1,5 @@
-<body class="sidebar-mini" cz-shortcut-listen="true">
+<body class="" cz-shortcut-listen="true"> 
+  <!-- class sidebar-mini -->
   <div class="wrapper">          
     <div class="sidebar" data-color="rose" data-background-color="black" data-image="assets/img/sidebar.jpg">
       <div class="logo">

@@ -139,6 +139,8 @@
 	                <th>Entry</th>
 	                <th>Exit</th>
 	                <th>Loaction</th>
+	                <th>Category</th>
+	                <th>Branch</th>
 			          </tr>
 			        </thead>
 			        <tbody>
@@ -153,6 +155,8 @@
 	                	<td><?php echo $row['entry']; ?></td>
 	                	<td><?php echo $row['exit']; ?></td>
 	                	<td><?php echo $row['loc']; ?></td>
+	                	<td><?php echo $row['cc']; ?></td>
+	                	<td><?php echo $row['branch']; ?></td>
 	                </tr>
 	              <?php
 	                } //while end
@@ -164,10 +168,14 @@
 			      			<td><?php echo $male[0]; ?></td>
 			   					<td>Female</td>
 			   					<td><?php echo $female[0]; ?></td>
+			   					<td></td>
+			   					<td></td>
 			   				</tr>
 			        </tbody>
 			        <tfoot>
 		            <tr>
+	                <th></th>
+	                <th></th>
 	                <th></th>
 	                <th></th>
 	                <th></th>

@@ -16,6 +16,8 @@ Thank You
 
 Locate/Find Readme.pdf For more information.
 
+Find the Guide Here: https://writeride.in/how-to-install-in-out-management-system/
+
 Profile @ https://omkar2403.github.io/its_me/
 
 Mail Me @ omkar.kakeru@gmail.com
