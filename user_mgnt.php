@@ -54,8 +54,10 @@
 								        		</thead>
 								        		<tbody>
 								        			<?php
+								        				$n = 0;
 								        				$res = getData($conn, "users");
 								        				foreach ($res as $user) {
+								        					$n++;
 								        			?>
 									          		<tr>
 											            <td class="text-center"><?php echo $user['id']; ?></td>
@@ -70,9 +72,15 @@
 												            <a rel="tooltip" href="edit_user.php?edituser=<?php echo $user['id']; ?>" class="btn btn-success btn-link" title="Edit">
 												              <i class="material-icons">edit</i>
 												            </a>
-												            <!-- <a rel="tooltip" href="process/admin/usr_process.php?deluser=<?php echo $user['id']; ?>" class="btn btn-danger btn-link" title="Delete">
+												            <?php
+												            	if($n > 3){
+												            ?>
+												            <a rel="tooltip" href="process/admin/usr_process.php?deluser=<?php echo $user['id']; ?>" class="btn btn-danger btn-link" title="Delete">
 												              <i class="material-icons">close</i>
-												            </a> -->
+												            </a>
+												            <?php
+												          		}
+												          	?>
 											            </td>
 									          		</tr>
 									          		<?php
