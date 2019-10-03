@@ -103,7 +103,7 @@ include './functions/dbfunc.php';
 			    		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
 						    <div class="form-group">
 						        <div class="h2 t-shadow"><?php echo $_SESSION['noname']; ?></div>
-						        <input type="text" name="id" class="form-control usn_input" placeholder="" value="" autofocus="autofocus">
+						        <input type="text" name="id" class="form-control usn_input" placeholder="" value="" autofocus="true">
 						    </div>    
 						</form>
 			    	</div>
