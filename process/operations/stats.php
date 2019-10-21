@@ -14,6 +14,6 @@
   $result = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error($conn));
   $tin = mysqli_fetch_row($result);
   // $query = "SELECT cc, COUNT(sl) FROM `inout` GROUP BY cc LIMIT 4";
-  $query = "SELECT cc, COUNT(sl) FROM `inout` WHERE loc='$loc' GROUP BY cc ORDER BY RAND() LIMIT 3 ";
+  $query = "SELECT cc, COUNT(sl) FROM `inout` WHERE date='$date' AND loc='$loc' GROUP BY cc ORDER BY RAND() LIMIT 3 ";
   $extraCount = mysqli_query($conn, $query) or die("Invalid query: " . mysqli_error($conn));
 ?>
