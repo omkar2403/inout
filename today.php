@@ -42,7 +42,7 @@
 			        <tbody>
 			        	<?php
 			        		$date = date('d-m-Y');
-			        		echo "<script type='text/javascript'>var printMsg = 'Todays(".$date.") Inout System Data';</script>";
+			        		echo "<script type='text/javascript'>var printMsg = '".$_SESSION['lib']." Today (".$date.") Inout System Data';</script>";
 			        		$date = date('Y-m-d');
                   $sql = "SELECT * FROM `inout` WHERE date = '$date' and `loc` = '$slib'";
                   $result = mysqli_query($conn, $sql) or die("Invalid query: " . mysqli_error());

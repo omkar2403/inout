@@ -11,6 +11,7 @@
 	require "functions/dbfunc.php";
 	require "functions/general.php";	
 	$slib = $_SESSION['loc'];
+	$cname = $_SESSION["lib"];
 ?>
 <!-- MAIN CONTENT START -->
 <?php
@@ -145,7 +146,7 @@
 			        </thead>
 			        <tbody>
 			        	<?php
-			        		echo "<script type='text/javascript'>var printMsg = 'Datewise Inout System Report From ".$fdate." To ".$tdate."';</script>";
+			        		echo "<script type='text/javascript'>var printMsg = '".$_SESSION['lib']." Datewise Inout System Report From ".$fdate." To ".$tdate."';</script>";
 	                while ($row = mysqli_fetch_array($result)) {
 	              ?>
 	              	<tr>
@@ -211,7 +212,7 @@
 					        </thead>
 					        <tbody>
 					        	<?php
-					        		echo "<script type='text/javascript'>var printMsg = 'Short Datewise Student Report For ".$usn." From ".$fdate." To ".$tdate."';</script>";
+					        		echo "<script type='text/javascript'>var printMsg = '".$_SESSION['lib']." Short Datewise Student Report For ".$usn." From ".$fdate." To ".$tdate."';</script>";
 		                  while ($row = mysqli_fetch_array($result)) {
 		                    $time = "00:00:00";
 		                    $tot = date("H:i", strtotime($time) + $row[2]);
@@ -264,7 +265,7 @@
 				        </thead>
 				        <tbody>
 				        	<?php
-				        		echo "<script type='text/javascript'>var printMsg = 'Detailed Inout System Report for ".$usn." From ".$fdate." To ".$tdate."';</script>";
+				        		echo "<script type='text/javascript'>var printMsg = '".$_SESSION['lib']." Detailed Inout System Report for ".$usn." From ".$fdate." To ".$tdate."';</script>";
 		                while ($row = mysqli_fetch_array($result)) {
 		              ?>
 		              	<tr>
@@ -319,7 +320,7 @@
 				        </thead>
 				        <tbody>
 				        	<?php
-				        		echo "<script type='text/javascript'>var printMsg = 'Statistical Inout System Report From ".$fdate." To ".$tdate."';</script>";
+				        		echo "<script type='text/javascript'>var printMsg = '".$_SESSION['lib']." Statistical Inout System Report From ".$fdate." To ".$tdate."';</script>";
 
 				        		if($slib=="Master"){
                       $query = "SELECT * FROM `loc`";

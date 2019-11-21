@@ -12,11 +12,14 @@
 	<div class="container-fluid">
 	  <div class="row">
 	    <div class="col-md-12">
-	       Welcome <?php echo $_SESSION['user_name']; ?>..
+	       Welcome <?php echo $_SESSION['user_name']; ?>.. 
 	    </div>
 	  </div>              
 	</div>
 </div>
+<script type="text/javascript">
+
+</script>
 <!-- MAIN CONTENT ENDS -->
 <?php
     if($_GET['msg']=="Evening"){

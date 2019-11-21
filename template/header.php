@@ -14,7 +14,6 @@
     	<script src="assets/js/custom.js" type="text/javascript" ></script>
 		<script src="assets/js/plugins/bootstrap-notify.js"></script>
 		<?php
-			date_default_timezone_set("Asia/Kolkata");
 			if($table){
 		?>
 				<link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>

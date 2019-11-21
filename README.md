@@ -1,6 +1,4 @@
-Download Stable Version 3 from Release Panel.
-
-Find Readme.pdf For more information.
+Download Stable Version 4 from Release Panel.
 
 SUGGESTIONS ARE WELCOME. FEEL FREE TO CONTACT.
 
@@ -10,11 +8,9 @@ In out management system is web based application. It is used to track the patro
 
 There are two interfaces, one is for the reading barcodes at the door and another one is for access the reports. This system will generate four types of reports in the form of excel sheet and can be downloaded. There are three user by default for administration of this system. Master user can have eye on every location added in the system. And the other two users for respected locations.
 
-The system uses koha database to fetch the information of patrons and store it another database along with the location, entry time and exit time. These data can be accessed from admin panel in various manner like datewise, timewise, USN wise and many more.
+The system uses koha database to fetch the information of patrons and store it another database along with the location, entry time and exit time. These data can be accessed from admin panel in various manner like datewise, timewise, student wise and many more.
 
 Thank You
-
-Locate/Find Readme.pdf For more information.
 
 Find the Guide Here: https://writeride.in/how-to-install-in-out-management-system/
 
@@ -22,7 +18,7 @@ Profile @ https://omkar2403.github.io/its_me/
 
 Mail Me @ omkar.kakeru@gmail.com
 
-Demo Video @ https://www.youtube.com/watch?v=1LqqwKYamHc&t=12s
+Demo Video @ https://www.youtube.com/watch?v=1LqqwKYamHc
 
 In Out Management System by Omkar Kakeru is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 

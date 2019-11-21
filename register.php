@@ -41,9 +41,9 @@
 			        <tbody>
 			        	<?php
 			        		$date = date('d-m-Y');
-			        		echo "<script type='text/javascript'>var printMsg = 'Entry Register for ".$slib." Inout System Data';</script>";
+			        		echo "<script type='text/javascript'>var printMsg = '".$_SESSION['lib']." Entry Register for ".$slib." Recent 500 entries Inout System Data'; </script>";
 			        		$date = date('Y-m-d');
-                  $sql = "SELECT *  FROM `inout` where `loc` = '$slib'";
+                  $sql = "SELECT *  FROM `inout` where `loc` = '$slib' ORDER BY sl DESC LIMIT 500";
                   $result = mysqli_query($conn, $sql) or die("Invalid query: " . mysqli_error($conn));
                   while ($row = mysqli_fetch_array($result)) {
                 ?>

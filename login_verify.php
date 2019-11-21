@@ -55,7 +55,7 @@
         if($role['rname'] == "Admin"){
           $_SESSION["id"] = $role['rname'];
           $_SESSION["loc"] = $loc;
-          $_SESSION["lib"] = $setup['libname'];
+          $_SESSION["lib"] = $setup['cname'];
           header("Location: index.php?msg=".$_SESSION['t']);
         }elseif ($role['rname'] == "User") {
           $_SESSION["id"] = $role['rname'];

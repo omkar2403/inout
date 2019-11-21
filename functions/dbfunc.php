@@ -1,7 +1,4 @@
 <?php
-	
-	date_default_timezone_set("Asia/Kolkata");
-
 	function getroles($conn){
 		$sql = "SELECT * FROM roles";
 		$result = mysqli_query($conn, $sql);
