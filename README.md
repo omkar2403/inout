@@ -12,7 +12,7 @@ The system uses koha database to fetch the information of patrons and store it a
 
 Thank You
 
-<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GffqOJ4TsFX8hN" async> </script> </form>
+Buy me a coffee: https://rzp.io/l/ta9LROfv7N
 
 Find the Guide Here: https://writeride.in/how-to-install-in-out-management-system/
 
