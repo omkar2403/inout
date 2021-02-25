@@ -1,12 +1,12 @@
 <?php
 session_start();
-if (!isset($_SESSION['CREATED'])) {
-    $_SESSION['CREATED'] = time();
-} else if (time() - $_SESSION['CREATED'] > 7200) {
-    // session started more than 120 minutes ago
-    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
-    $_SESSION['CREATED'] = time();  // update creation time
-}
+// if (!isset($_SESSION['CREATED'])) {
+//     $_SESSION['CREATED'] = time();
+// } else if (time() - $_SESSION['CREATED'] > 7200) {
+//     // session started more than 120 minutes ago
+//     session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
+//     $_SESSION['CREATED'] = time();  // update creation time
+// }
 
 if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
    header("location:login.php");
@@ -226,6 +226,20 @@ include './functions/dbfunc.php';
 					window.location.replace("/inout/user.php");
 				}, 5700);
 			});
+		</script>
+		<script>
+	    var time = new Date().getTime();
+	    $(document.body).bind("mousemove keypress submit", function(e) {
+	      time = new Date().getTime();
+	    });
+	    // console.log(time);
+	    function refresh() {
+        if(new Date().getTime() - time >= 14400000) 
+          window.location.reload(true);
+        else 
+          setTimeout(refresh, 60000);
+	    }
+	    setTimeout(refresh, 60000);
 		</script>
 	</body>
 </html>

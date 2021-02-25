@@ -79,6 +79,7 @@
                   </div>
                 </div>
               </form>
+              <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GffqOJ4TsFX8hN" async> </script> </form>
             </div>
           </div>
           <footer class="footer">
