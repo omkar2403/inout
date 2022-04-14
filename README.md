@@ -2,6 +2,12 @@ Download Stable Version 4 from Release Panel.
 
 SUGGESTIONS ARE WELCOME. FEEL FREE TO CONTACT.
 
+For any queries New Ticket System is open for all. Please open an ticket and submit query regarding in out management system and KOHA.
+
+https://ticket.playtech.in/
+
+For first time, create a new account. 
+
 Introduction:
 
 In out management system is web based application. It is used to track the patrons who visits to library or related locations like study zone, reading room etc. It’ll scan the barcode from the ID and log the entry time and exit time of the patrons. The patron data will be fetched from the KOHA database along with the images and displayed on this system.
@@ -18,9 +24,11 @@ Find the Guide Here: https://writeride.com/how-to-install-in-out-management-syst
 
 Profile @ https://omkar2403.github.io/its_me/
 
-Mail Me @ omkar.kakeru@gmail.com
+[Only Urgent] Mail Me @ omkar.kakeru@gmail.com else use our ticket system mentioned above.
 
 Demo Video @ https://www.youtube.com/watch?v=1LqqwKYamHc
+
+Thank you all library staff & koha community for making use of this application. Thank you all.
 
 In Out Management System by Omkar Kakeru is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 
