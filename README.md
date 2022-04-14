@@ -14,7 +14,7 @@ Thank You
 
 Buy me a coffee: https://rzp.io/l/ta9LROfv7N
 
-Find the Guide Here: https://writeride.in/how-to-install-in-out-management-system/
+Find the Guide Here: https://writeride.com/how-to-install-in-out-management-system/
 
 Profile @ https://omkar2403.github.io/its_me/
 
