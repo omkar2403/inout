@@ -11,7 +11,6 @@
         $time = date('H:i:s');
         error_reporting(E_ALL);
         //patron data fetching
-        // $sql = "SELECT CONCAT(title,' ',firstname,' ',surname) AS surname,borrowernumber,sex,categorycode,branchcode,sort1,sort2 FROM borrowers WHERE cardnumber='$usn'";
         $sql = "SELECT CONCAT(title,' ',firstname,' ',surname) AS surname,borrowernumber,sex,categorycode,branchcode,sort1,sort2,mobile,email FROM borrowers WHERE cardnumber='$usn' AND dateexpiry > '$date'";
         $result = mysqli_query($koha, $sql) or die("Invalid query: 2" . mysqli_error());
         $data1 = mysqli_fetch_row($result);
@@ -63,6 +62,8 @@
                         $msg = "4";
                         $e_img = $data2[0];
                         $time1 = date('g:i A', strtotime($time));
+                        $sql = "INSERT INTO `tmp2` (`usn`, `time`) VALUES ('$usn', CURRENT_TIMESTAMP);";
+                        $result = mysqli_query($conn, $sql) or die("Invalid query: 8" . mysqli_error());
                     }
                 } else {
                     $msg = "2";
@@ -73,7 +74,17 @@
                     $time1 = "-";
                 }
             } else {
-                if ($data1) {
+              $chk = "SELECT `usn` FROM tmp2 WHERE `usn`='$usn'";
+              $chk2 = mysqli_query($conn, $chk) or die("Invalid query: 4" . mysqli_error());
+              $chk3 = mysqli_fetch_row($chk2);
+              if($chk3){
+                $msg = "5";
+                $e_name = NULL;
+                $d_status = NULL;
+                $e_img = NULL;
+                $date = NULL;
+                $time1 = "-";
+              } elseif ($data1) {
                     $sl = getsl($conn, "sl", "inout");
                     $sql = "INSERT INTO `inout` (`sl`, `cardnumber`, `name`, `gender`, `date`, `entry`, `exit`, `status`,`loc`,`cc`,`branch`,`sort1`,`sort2`,`email`,`mob`) VALUES ('$sl', '$usn', '$data1[0]', '$data1[2]', '$date', '$time', '".$_SESSION['libtime']."', 'IN','$loc','$data3[0]','$data4[0]','$data1[5]','$data1[6]','$data1[8]','$data1[7]');";
                     $result = mysqli_query($conn, $sql) or die("Invalid query: 11" . mysqli_error($conn));

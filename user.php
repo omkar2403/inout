@@ -145,6 +145,11 @@ include './functions/dbfunc.php';
 								    ?> <span class="animated flash"> <?php 
 								    echo "<span class='text-success'>Thank you.</span><br>Your Exit time is: " . date('g:i A', strtotime($time)) . "<br><span class='text-warning'>Total Time Duration : ".$otime[0]."</span>";
 								    ?> </span> <?php
+								} elseif ($msg == "5") {
+								    # code...
+								    ?> <span class="animated flash"> <?php 
+								    echo "<span class='text-warning'>You just Checked Out.<br> Wait for 10 Seconds to Check Out.</span>";
+								    ?> </span> <?php
 								} else {
 									?> <div class="animated pulse infinite"> <?php 
 								    echo "<span class='text-info'>SCAN YOUR ID CARD.</span>";
