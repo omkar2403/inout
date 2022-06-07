@@ -39,7 +39,7 @@
                     $sql = "SELECT *  FROM `inout` WHERE `cardnumber` = '$usn' AND `date` = '$date' AND `status` = 'IN'";
                     $result = mysqli_query($conn, $sql) or die("Invalid query: 5" . mysqli_error());
                     $chk4 = mysqli_fetch_array($result);
-                    if($chk4['loc'] != $loc){
+                    if($chk4['loc'] != $_SESSION['locname']){
                         $sql = "UPDATE `inout` SET `exit` = '$time', `status` = 'OUT' WHERE `sl` = $exit[0];";
                         $result = mysqli_query($conn, $sql) or die("Invalid query: 6" . mysqli_error());
                         $sl = getsl($conn, "sl", "inout");

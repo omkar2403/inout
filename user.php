@@ -15,7 +15,9 @@ include "./process/operations/main.php";
 include "./process/operations/stats.php";
 include './functions/dbfunc.php';
 
-	$data = checknews($conn, $_SESSION['loc']);
+  $loc = $_SESSION['loc'];
+
+	$data = checknews($conn, $loc);
 	if($data){
 		$news = true;
 	}else{
@@ -42,7 +44,7 @@ include './functions/dbfunc.php';
 				</div> -->
 					<div class="col-xs-12 col-md-12 col-lg-12 text-center main_title" >
 						<div class="h1 title" style="font-size: 29px;"><b><?php echo $_SESSION['lib']; ?></b></div>
-						<div class="h2 sub_title"><b>Welcome to <?php echo $_SESSION['loc']; ?></b><br><h4>In / Out Management System</h4></div>
+						<div class="h2 sub_title"><b>Welcome to <?php echo $_SESSION['locname']; ?></b><br><h4>In / Out Management System</h4></div>
 						
 					</div>
 				<!-- <div class="col-xs-2 col-md-2 col-lg-2" >
@@ -126,7 +128,7 @@ include './functions/dbfunc.php';
 							<?php
 								if ($msg == "1") {
 									?> <span class="animated flash"> <?php 
-								    echo "<span class='text-primary'>Welcome to ".$_SESSION['loc'].".<br>Your ".$_SESSION['noname']." is: " . $usn . "<br>Entry time is: " . date('g:i A', strtotime($time))."</span>";
+								    echo "<span class='text-primary'>Welcome to ".$_SESSION['locname'].".<br>Your ".$_SESSION['noname']." is: " . $usn . "<br>Entry time is: " . date('g:i A', strtotime($time))."</span>";
 								    ?> </span> <?php
 								} elseif ($msg == "2") {
 								    # code...

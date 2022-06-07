@@ -357,7 +357,7 @@
 	                      $result = mysqli_query($conn, $sql) or die("Invalid query3: " . mysqli_error($conn));
 	                      $visit = mysqli_fetch_row($result);
 	                      if($visit[0] != '0'){
-	                      	echo "<tr><td>".$idate."</td><td> ".$male[1]."</td><td>".$male[0]." </td><td>".$female['0']."</td><td> ".$visit['0']."</td><td>".$slib."</td></tr>"; 
+	                      	echo "<tr><td>".$idate."</td><td> ".$male[1]."</td><td>".$male[0]." </td><td>".$female['0']."</td><td> ".$visit['0']."</td><td>".$_SESSION['loc']."</td></tr>"; 
 	                    	}
 	                      $idate=date_create("$idate");
 	                      date_add($idate,date_interval_create_from_date_string("1 days"));

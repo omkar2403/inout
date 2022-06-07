@@ -4,7 +4,7 @@
   $edate = date("20y-m-d");
 
 	if(isset($_POST['basic'])){
-    $ccname = $_POST['cname'];
+    $ccname = sanitize($conn, $_POST['cname']);
     $query = "UPDATE `setup` SET `value` = '$ccname' WHERE `setup`.`var` = 'cname'";
     $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
 
@@ -23,6 +23,7 @@
 
   if(isset($_POST['location'])){
     $loc = $_POST['loc'];
+    $loc = sanitize($conn, $loc);
     $sl = getsl($conn, "id", "loc");
     $query = "INSERT INTO `loc` VALUES('".$sl."', '".$loc."');";
     $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
@@ -36,7 +37,7 @@
     $nhead = $_POST['nhead'];
     $nbody = $_POST['nbody'];
     $nfoot = $_POST['nfoot'];
-    $loc = $_POST['loc'];
+    $loc = sanitize($conn,$_POST['loc']);
 
     $query = "UPDATE `news` SET `status` = 'No' WHERE `status` = 'Yes' AND `loc` = '".$loc."'";
     $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error($conn));
