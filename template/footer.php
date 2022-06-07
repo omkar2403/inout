@@ -6,7 +6,7 @@
                 <li><a href="https://www.koha-community.org/" target="_blank">Powered By KOHA Community</a></li>
               </ul>
             </nav>
-            <div class="copyright float-right">©<script>document.write(new Date().getFullYear())</script>, made with <i class="material-icons">favorite</i> by
+            <div class="copyright float-right">©<script>document.write(new Date().getFullYear())</script>, made with <i class="material-icons" style="color:red;">favorite</i> by
               <a href="https://omkar2403.github.io/its_me/" target="_blank">Omkar Kakeru</a> for a better web.
             </div>
           </div>

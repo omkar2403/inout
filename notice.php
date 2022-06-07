@@ -58,7 +58,7 @@
 								        <?php
 								          $result = getData($conn, "loc");
 								          while ($row = mysqli_fetch_array($result)) {
-								            echo "<option value='".$row['loc']."'>".$row['loc']."</option>";
+								            echo '<option value="'.$row['loc'].'">'.$row['loc'].'</option>';
 								          }
 								        ?>                                               
 								      </select>
