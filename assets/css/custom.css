@@ -1,6 +1,6 @@
-.btn {
+/*.btn {
 	padding: 6px 12px !important;
-}    
+}    */
 .main-panel > .content {
      min-height: calc(100vh - 160px); 
 }
@@ -148,6 +148,29 @@
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+
+.rounded-circle{
+  width: 250px; 
+  height: 250px;
+}
+
+.status-inout{
+  font-weight: 400;
+}
+
+.idle{
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: calc(100vh - 326px);
+  margin-top: 100px;
+}
+
+.t-shadow {
+    text-shadow: 6px 6px 6px rgba(177, 173, 173, 0.38), 6px 6px 8px rgba(128, 128, 136, 0.37);
+}
 
 @media screen and (max-width: 700px) {
     .card-login{
