@@ -8,7 +8,6 @@
 	}
 	require "./functions/access.php";
 	require_once "./template/header.php";
-	header( "refresh:9;url=test.php" );
 	require "functions/dbfunc.php";
 
   $loc = $_SESSION['loc'];
@@ -20,7 +19,7 @@
 		$news = false;
 	}
 ?>
-<body class="" cz-shortcut-listen="true" style="background-color: #F1EADE;"> 
+<body style="background-color: #F1EADE;"> 
 <!-- MAIN CONTENT START -->
 <div class="content" style="min-height: calc(100vh - 90px);">
 	<div class="container-fluid">
@@ -36,6 +35,9 @@
 	    	<div>
 		    	<h2>In Out Management System</h2>
 		    	<h3><?php echo $_SESSION['locname']; ?></h3>
+		    	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+		        <input type="text" name="id" id="usn" class="usn_input" value="" autofocus="true">
+					</form>
 		    </div>
 	    	<?php
 	    		if(isset($d_status)){
@@ -159,6 +161,12 @@
 	  </div>              
 	</div>
 </div>
+<script type="text/javascript">
+	document.getElementById("usn").focus();
+	setTimeout(function(){
+		window.location.replace("/inout/dash.php");
+	}, 9700);
+</script>
 <!-- MAIN CONTENT ENDS -->
 <?php
 	require_once "./template/footer.php";

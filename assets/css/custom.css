@@ -172,6 +172,11 @@
     text-shadow: 6px 6px 6px rgba(177, 173, 173, 0.38), 6px 6px 8px rgba(128, 128, 136, 0.37);
 }
 
+.usn_input{
+  position: absolute; 
+  left: -9999px;
+}
+
 @media screen and (max-width: 700px) {
     .card-login{
     	margin-top: 80px;
