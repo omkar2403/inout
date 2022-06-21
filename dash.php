@@ -2,7 +2,7 @@
 	include "./process/operations/main.php";
 	include "./process/operations/stats.php";
 	$title = "Gate Register";
-	$acc_code = "";
+	$acc_code = "U02";
 	if(!isset($_SESSION['id']) && empty($_SESSION['id'])) {
    header("location:login.php");
 	}
@@ -18,6 +18,10 @@
 	}else{
 		$news = false;
 	}
+ $img_flag = true;
+	if(!$e_img){
+		$img_flag = false;
+	}
 ?>
 <body style="background-color: #F1EADE;"> 
 <!-- MAIN CONTENT START -->
@@ -27,7 +31,21 @@
 	    <div class="col-md-6">
 	    	<div class="card" style="min-height: calc(100vh - 150px);">
 	        <div class="card-body">
-	        	<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
+						<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
+	        	<img class="img-responsive" src="https://via.placeholder.com/890x150">
+	        <?php if($news) { ?>
+	        	<div class="card-block">
+							<div class="card-title text-info h4 text-center">
+								 <?php echo "<br/>".$data['nhead']; ?> 
+							</div>		        
+							<div class="h4 text-center" style="text-align: justify !important;">
+								 <?php echo "<br/>".nl2br($data['nbody']); ?> 
+							</div>
+							<div class="h4 text-success text-center">
+						 		<?php echo "<br/>".$data['nfoot']; ?> 
+							</div>
+						</div>
+					<?php } ?>
 	        </div>
 	      </div>
 	    </div>
@@ -43,7 +61,11 @@
 	    		if(isset($d_status)){
 	    	?>
 	    	<div class="card-body text-center">
-	    		<img src="data:image/jpg/png/jpeg;base64,<?php echo base64_encode($e_img); ?>"  class="rounded-circle mb-4" alt="...">
+	    		<?php if($img_flag) { ?>
+	    			<img src="data:image/jpg/png/jpeg;base64,<?php echo base64_encode($e_img); ?>"  class="rounded-circle mb-4" alt="...">
+		    	<?php } else { ?>
+		    		<img src="assets/img/placeholder.png" class="rounded-circle mb-4" alt="..."> 2
+		    	<?php } ?>
 					<h4 class="mb-0" style="font-weight: 800;"><?php echo $e_name; ?></h4>
 					<p class="mb-2"><?php echo $usn; ?></p>
 				</div>
@@ -162,10 +184,15 @@
 	</div>
 </div>
 <script type="text/javascript">
+	$('span').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+	  	setTimeout(function(){
+			window.location.replace("/inout/dash.php");
+		}, 5200);
+	});
 	document.getElementById("usn").focus();
 	setTimeout(function(){
-		window.location.replace("/inout/dash.php");
-	}, 9700);
+		// window.location.replace("/inout/dash.php");
+	}, 9800);
 </script>
 <!-- MAIN CONTENT ENDS -->
 <?php

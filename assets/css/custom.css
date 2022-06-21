@@ -172,6 +172,16 @@
     text-shadow: 6px 6px 6px rgba(177, 173, 173, 0.38), 6px 6px 8px rgba(128, 128, 136, 0.37);
 }
 
+.t-shadow .row {
+  text-shadow: none;
+}
+
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .usn_input{
   position: absolute; 
   left: -9999px;
