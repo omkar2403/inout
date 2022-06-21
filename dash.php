@@ -46,6 +46,28 @@
 							</div>
 						</div>
 					<?php } ?>
+					<?php if($new_arrivals) { ?>
+						<h3 class="text-center">New Arrivals</h3>
+						<div class="new-arrivals">
+							<img src="assets/img/150x200.png">
+							<img src="assets/img/150x200.png">
+							<img src="assets/img/150x200.png">
+							<img src="assets/img/150x200.png">
+						</div>
+						<div class="new-arrivals">
+							<img src="assets/img/150x200.png">
+							<img src="assets/img/150x200.png"> 
+							<img src="assets/img/150x200.png">
+							<img src="assets/img/150x200.png">
+						</div>
+					<?php } ?>
+						<div class="card-block" style="margin:34px;">
+							<h3 class="text-center">Quote of the Day</h3>
+							<blockquote class="blockquote">
+                <p></p>
+                <small></small>
+              </blockquote>
+						</div>
 	        </div>
 	      </div>
 	    </div>
@@ -64,7 +86,7 @@
 	    		<?php if($img_flag) { ?>
 	    			<img src="data:image/jpg/png/jpeg;base64,<?php echo base64_encode($e_img); ?>"  class="rounded-circle mb-4" alt="...">
 		    	<?php } else { ?>
-		    		<img src="assets/img/placeholder.png" class="rounded-circle mb-4" alt="..."> 2
+		    		<img src="assets/img/placeholder.png" class="rounded-circle mb-4" alt="...">
 		    	<?php } ?>
 					<h4 class="mb-0" style="font-weight: 800;"><?php echo $e_name; ?></h4>
 					<p class="mb-2"><?php echo $usn; ?></p>
@@ -184,6 +206,31 @@
 	</div>
 </div>
 <script type="text/javascript">
+	// Powered by Quotable
+// https://github.com/lukePeavey/quotable
+
+document.addEventListener("DOMContentLoaded", () => {
+  // DOM elements
+  const quote = document.querySelector("blockquote p");
+  const cite = document.querySelector("blockquote small");
+
+  async function updateQuote() {
+    // Fetch a random quote from the Quotable API
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    if (response.ok) {
+      // Update DOM elements
+      quote.textContent = data.content;
+      cite.textContent = data.author;
+    } else {
+      quote.textContent = "An error occured";
+      console.log(data);
+    }
+  }
+  // call updateQuote once when page loads
+  updateQuote();
+});
+
 	$('span').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 	  	setTimeout(function(){
 			window.location.replace("/inout/dash.php");
@@ -191,7 +238,7 @@
 	});
 	document.getElementById("usn").focus();
 	setTimeout(function(){
-		window.location.replace("/inout/dash.php");
+		// window.location.replace("/inout/dash.php");
 	}, 9800);
 </script>
 <!-- MAIN CONTENT ENDS -->
