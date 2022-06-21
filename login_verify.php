@@ -65,7 +65,7 @@
           $_SESSION["lib"] = $setup['cname'];
           $_SESSION["libtime"] = $setup['libtime'];
           $_SESSION["noname"] = $setup['noname'];
-          header("Location: user.php");
+          header("Location: dash.php");
         }else{
           header('location:login.php?msg=1');
         }

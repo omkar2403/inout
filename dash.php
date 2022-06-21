@@ -191,7 +191,7 @@
 	});
 	document.getElementById("usn").focus();
 	setTimeout(function(){
-		// window.location.replace("/inout/dash.php");
+		window.location.replace("/inout/dash.php");
 	}, 9800);
 </script>
 <!-- MAIN CONTENT ENDS -->
