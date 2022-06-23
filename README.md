@@ -1,4 +1,26 @@
-Download Stable Version 4 from Release Panel.
+Download Stable Version 5 from Release Panel.
+
+Change Log 5
+[New Features]
+* Backup System added
+* New user interface
+* New arrival display
+* Random Quotes display
+* News module redesign
+* Banner added
+* Analog Clock addded
+
+[Bug Fixes]
+* Automatic logout after 20 minutes
+* user id lenght
+* Location name error
+* Blank Image Fix
+* 10 Second pause after checkout
+* Other visual minor bugs are fixed
+
+Migration from version v4.* to v5
+
+Update database from updatedb file.
 
 SUGGESTIONS ARE WELCOME. FEEL FREE TO CONTACT.
 

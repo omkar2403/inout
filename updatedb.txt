@@ -1,0 +1,26 @@
+Migrate from v4.* to v5
+
+Open Terminal.
+
+Login to mysql.
+
+Select inout database.
+
+Execute the following query one by one.
+
+ALTER TABLE `inout` CHANGE `cardnumber` `cardnumber` VARCHAR(30) NOT NULL;
+
+ALTER TABLE `inout` CHANGE `loc` `loc` VARCHAR(100) NOT NULL DEFAULT '';
+
+ALTER TABLE `loc` CHANGE `loc` `loc` VARCHAR(100) NOT NULL;
+
+CREATE TABLE `log` (
+  `id` int(11) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `time` varchar(20) NOT NULL,
+  `usertype` varchar(100) NOT NULL DEFAULT '',
+  `userid` varchar(20) NOT NULL,
+  `action` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
