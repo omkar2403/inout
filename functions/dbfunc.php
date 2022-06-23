@@ -119,5 +119,25 @@
 		return $result;
 	}
 
+	 function getBackupData($conn, $table){
+    $sql = "SELECT * FROM $table ORDER BY id DESC LIMIT 10";
+    $result = mysqli_query($conn, $sql);
+    if(!$result){
+      echo "Can't retrieve data " . mysqli_error($conn);
+      exit;
+    }
+    return $result;
+  }
+
+  function logthis($conn, $id, $date, $time, $usertype, $userid, $action){
+    $sql = "INSERT INTO `log` (`id`, `date`, `time`, `usertype`, `userid`, `action`) VALUES ('".$id."', '".$date."', '".$time."', '".$usertype."', '".$userid."', '".$action."')";
+    $result = mysqli_query($conn, $sql);
+    if(!$result){
+      echo "Can't retrieve data " . mysqli_error($conn);
+      exit;
+    }
+    return $result;
+  }
+
 
 ?>

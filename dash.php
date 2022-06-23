@@ -33,7 +33,7 @@
 	        <div class="card-body">
 						<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
 	        	<img class="img-responsive" src="https://via.placeholder.com/890x150">
-	        <?php if(!$news) { ?>
+	        <?php if($news) { ?>
 	        	<div class="card-block">
 							<div class="card-title text-info h4 text-center">
 								 <?php echo "<br/>".$data['nhead']; ?> 

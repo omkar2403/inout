@@ -48,6 +48,9 @@
             <li class="nav-item <?php if($title == 'Report') echo 'active'; ?>">
               <a class="nav-link" href="reports.php"><i class="material-icons">list</i><p>Reports</p></a>
             </li>
+            <li class="nav-item <?php if($title == 'Backup') echo 'active'; ?>">
+              <a class="nav-link" href="backup.php"><i class="material-icons">cloud</i><p>Backup</p></a>
+            </li>
           <?php
             }
             if(in_array('S01', $user_access)){
