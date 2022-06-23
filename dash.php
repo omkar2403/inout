@@ -11,6 +11,10 @@
 	require "functions/dbfunc.php";
 
   $loc = $_SESSION['loc'];
+  $new_arrivals = false;
+  $quote = false;
+  $clock = false;
+  $banner = false;
 
 	$data = checknews($conn, $loc);
 	if($data){
@@ -18,6 +22,7 @@
 	}else{
 		$news = false;
 	}
+
  $img_flag = true;
 	if(!$e_img){
 		$img_flag = false;
@@ -31,8 +36,11 @@
 	    <div class="col-md-6">
 	    	<div class="card" style="min-height: calc(100vh - 150px);">
 	        <div class="card-body">
-						<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
-	        	<img class="img-responsive" src="https://via.placeholder.com/890x150">
+	        	<?php if(!$banner) { ?>
+							<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
+						<?php }else{ ?>
+	        		<img class="img-responsive" src="https://via.placeholder.com/890x150">
+	        	<?php } ?>
 	        <?php if($news) { ?>
 	        	<div class="card-block">
 							<div class="card-title text-info h4 text-center">
@@ -49,19 +57,19 @@
 					<?php if($new_arrivals) { ?>
 						<h3 class="text-center">New Arrivals</h3>
 						<div class="new-arrivals">
-							<img src="assets/img/150x200.png">
-							<img src="assets/img/150x200.png">
-							<img src="assets/img/150x200.png">
-							<img src="assets/img/150x200.png">
+							<img src="assets/books/1.png">
+							<img src="assets/books/2.png">
+							<img src="assets/books/3.png">
+							<img src="assets/books/4.png">
 						</div>
 						<div class="new-arrivals">
-							<img src="assets/img/150x200.png">
-							<img src="assets/img/150x200.png"> 
-							<img src="assets/img/150x200.png">
-							<img src="assets/img/150x200.png">
+							<img src="assets/books/5.png">
+							<img src="assets/books/6.png"> 
+							<img src="assets/books/7.png">
+							<img src="assets/books/8.png">
 						</div>
 					<?php } ?>
-					<?php if(!$quote) { ?>
+					<?php if($quote) { ?>
 						<div class="card-block2" style="min-height: calc(100vh - 430px);">
 							<div class="qcard">
 							  <div class="qcontent">
