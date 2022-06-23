@@ -9,11 +9,11 @@ Change Log 5
 * Random Quotes display
 * News module redesign
 * Banner added
-* Analog Clock addded
+* Analog Clock added
 
 [Bug Fixes]
 * Automatic logout after 20 minutes
-* user id lenght
+* user id length
 * Location name error
 * Blank Image Fix
 * 10 Second pause after checkout
