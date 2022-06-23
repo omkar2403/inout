@@ -33,7 +33,7 @@
 	        <div class="card-body">
 						<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
 	        	<img class="img-responsive" src="https://via.placeholder.com/890x150">
-	        <?php if($news) { ?>
+	        <?php if(!$news) { ?>
 	        	<div class="card-block">
 							<div class="card-title text-info h4 text-center">
 								 <?php echo "<br/>".$data['nhead']; ?> 
@@ -61,6 +61,7 @@
 							<img src="assets/img/150x200.png">
 						</div>
 					<?php } ?>
+					<?php if($quote) { ?>
 						<div class="card-block" style="margin:34px;">
 							<h3 class="text-center">Quote of the Day</h3>
 							<blockquote class="blockquote">
@@ -68,6 +69,30 @@
                 <small></small>
               </blockquote>
 						</div>
+					<?php } ?>
+					<?php if(!$clock) { ?>
+						<div class="card-body">
+							<div class="analogclock">
+							  <div>
+							    <div class="cinfo cdate"></div>
+							    <div class="cinfo cday"></div>
+							  </div>
+							  <div class="cdot"></div>
+							  <div>
+							    <div class="chour-hand"></div>
+							    <div class="cminute-hand"></div>
+							    <div class="csecond-hand"></div>
+							  </div>
+							  <div id="dial">
+							    <span class="n3">3</span>
+							    <span class="n6">6</span>
+							    <span class="n9">9</span>
+							    <span class="n12">12</span>
+							  </div>
+							  <div class="cdiallines"></div>
+							</div>
+						</div>
+					<?php } ?>
 	        </div>
 	      </div>
 	    </div>
@@ -205,6 +230,7 @@
 	  </div>              
 	</div>
 </div>
+<script src="assets/js/analogclock.js"></script>
 <script type="text/javascript">
 	// Powered by Quotable
 // https://github.com/lukePeavey/quotable
