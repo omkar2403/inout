@@ -199,6 +199,68 @@
   left: -9999px;
 }
 
+//card quote
+
+.qcaption, .qheading, .qsub-heading {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.qcard {
+  height: 70%;
+  width: 90%;
+  margin: 0 auto;
+  transform: translateY(20%);
+  position: relative;
+  padding: 1rem 1.75rem;
+  background: linear-gradient(to top, #5b5b5b 0%, #575757 17%, rgba(28, 186, 213, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#03ecfa", endColorstr="#001cbad5",GradientType=0 );
+  box-shadow: -12px 18px 40px 0px rgba(0, 0, 0, 0.8);
+}
+
+.card-block2 {
+  position: relative;
+  background-image: url("http://localhost/inout/assets/img/quote.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20rem;
+  margin-top: 24px;
+}
+
+.qsub-heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.qsub-heading:before {
+  content: "/ ";
+}
+.qsub-heading:after {
+  content: " /";
+}
+
+.qheading {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.qcaption {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.qcontent {
+  position: relative;
+  bottom: 0rem;
+}
+
 @media screen and (max-width: 700px) {
     .card-login{
     	margin-top: 80px;

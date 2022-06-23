@@ -61,16 +61,20 @@
 							<img src="assets/img/150x200.png">
 						</div>
 					<?php } ?>
-					<?php if($quote) { ?>
-						<div class="card-block" style="margin:34px;">
-							<h3 class="text-center">Quote of the Day</h3>
-							<blockquote class="blockquote">
-                <p></p>
-                <small></small>
-              </blockquote>
+					<?php if(!$quote) { ?>
+						<div class="card-block2" style="min-height: calc(100vh - 430px);">
+							<div class="qcard">
+							  <div class="qcontent">
+							    <h3 class="qsub-heading">Quote for the thought</h3>
+							    <blockquote>
+								    <h1 class="qheading"></h1>
+								    <p class="qcaption"><strong></strong></p>
+							  	</blockquote>
+							  </div>
+							</div>
 						</div>
 					<?php } ?>
-					<?php if(!$clock) { ?>
+					<?php if($clock) { ?>
 						<div class="card-body">
 							<div class="analogclock">
 							  <div>
@@ -237,8 +241,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // DOM elements
-  const quote = document.querySelector("blockquote p");
-  const cite = document.querySelector("blockquote small");
+  const quote = document.querySelector("blockquote h1");
+  const cite = document.querySelector("blockquote p");
 
   async function updateQuote() {
     // Fetch a random quote from the Quotable API
