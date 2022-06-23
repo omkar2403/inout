@@ -2,6 +2,7 @@ Download Stable Version 5 from Release Panel.
 
 Change Log 5
 [New Features]
+* Automatic Checkin/checkout System
 * Backup System added
 * New user interface
 * New arrival display
@@ -20,7 +21,7 @@ Change Log 5
 
 Migration from version v4.* to v5
 
-Update database from updatedb file.
+Update database from updatedb.txt file.
 
 SUGGESTIONS ARE WELCOME. FEEL FREE TO CONTACT.
 
