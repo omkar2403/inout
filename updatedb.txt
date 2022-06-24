@@ -24,3 +24,8 @@ CREATE TABLE `log` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `setup` (`var`, `value`)
+VALUES
+  ('banner', 'false'),
+  ('activedash', 'quote');
+

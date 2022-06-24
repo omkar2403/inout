@@ -11,14 +11,40 @@
 	require "functions/dbfunc.php";
 
   $loc = $_SESSION['loc'];
+
   $new_arrivals = false;
   $quote = false;
   $clock = false;
   $banner = false;
 
+  $banner = $_SESSION["banner"];
+  $activedash = $_SESSION["activedash"];
+
+  if($banner == "true"){
+  	$banner = true;
+  }elseif($banner == "false"){
+  	$banner = false;
+  }
+
+  if($activedash == 'clock'){
+  	$clock = true;
+  }elseif($activedash == 'quote'){
+  	$quote = true;
+  }elseif($activedash == 'newarrivals'){
+  	$new_arrivals = true;
+  }else{
+  	$new_arrivals = false;
+	  $quote = false;
+	  $clock = false;
+  }
+
 	$data = checknews($conn, $loc);
 	if($data){
 		$news = true;
+		$new_arrivals = false;
+	  $quote = false;
+	  $clock = false;
+	  $banner = false;
 	}else{
 		$news = false;
 	}
@@ -27,6 +53,10 @@
 	if(!$e_img){
 		$img_flag = false;
 	}
+
+	$jsonfile = file_get_contents("assets/quotes.json");
+  $quotes = json_decode($jsonfile, true);
+  $onequote = $quotes[rand(0, count($quotes) - 1)];
 ?>
 <body style="background-color: #F1EADE;"> 
 <!-- MAIN CONTENT START -->
@@ -36,10 +66,10 @@
 	    <div class="col-md-6">
 	    	<div class="card" style="min-height: calc(100vh - 150px);">
 	        <div class="card-body">
-	        	<?php if(!$banner) { ?>
-							<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
+	        	<?php if($banner) { ?>
+							<img class="img-responsive" src="assets/img/banner.png">
 						<?php }else{ ?>
-	        		<img class="img-responsive" src="https://via.placeholder.com/890x150">
+							<h3 class="text-center"><?php echo $_SESSION['lib']; ?></h3>
 	        	<?php } ?>
 	        <?php if($news) { ?>
 	        	<div class="card-block">
@@ -75,8 +105,8 @@
 							  <div class="qcontent">
 							    <h3 class="qsub-heading">Quote for the thought</h3>
 							    <blockquote>
-								    <h1 class="qheading"></h1>
-								    <p class="qcaption"><strong></strong></p>
+								    <h1 class="qheading"><?php echo $onequote["content"]; ?></h1>
+								    <p class="qcaption"><strong><?php echo $onequote["author"]; ?></strong></p>
 							  	</blockquote>
 							  </div>
 							</div>
@@ -244,31 +274,6 @@
 </div>
 <script src="assets/js/analogclock.js"></script>
 <script type="text/javascript">
-	// Powered by Quotable
-// https://github.com/lukePeavey/quotable
-
-document.addEventListener("DOMContentLoaded", () => {
-  // DOM elements
-  const quote = document.querySelector("blockquote h1");
-  const cite = document.querySelector("blockquote p");
-
-  async function updateQuote() {
-    // Fetch a random quote from the Quotable API
-    const response = await fetch("https://api.quotable.io/random");
-    const data = await response.json();
-    if (response.ok) {
-      // Update DOM elements
-      quote.textContent = data.content;
-      cite.textContent = data.author;
-    } else {
-      quote.textContent = "An error occured";
-      console.log(data);
-    }
-  }
-  // call updateQuote once when page loads
-  updateQuote();
-});
-
 	$('span').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 	  	setTimeout(function(){
 			window.location.replace("/inout/dash.php");

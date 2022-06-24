@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 01, 2019 at 12:46 PM
--- Server version: 5.7.25
--- PHP Version: 7.0.33
+-- Generation Time: Jun 24, 2022 at 04:22 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lib`
+-- Database: `inout`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE `inout` (
   `branch` varchar(100) NOT NULL DEFAULT '',
   `sort1` varchar(30) NOT NULL DEFAULT '',
   `sort2` varchar(30) NOT NULL DEFAULT '',
-  `email` varchar(30) NOT NULL DEFAULT '',
+  `email` varchar(120) NOT NULL DEFAULT '',
   `mob` varchar(20) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -54,6 +54,21 @@ CREATE TABLE `loc` (
   `id` int(11) NOT NULL,
   `loc` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `log`
+--
+
+CREATE TABLE `log` (
+  `id` int(11) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `time` varchar(20) NOT NULL,
+  `usertype` varchar(100) NOT NULL DEFAULT '',
+  `userid` varchar(20) NOT NULL,
+  `action` varchar(100) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -109,10 +124,12 @@ CREATE TABLE `setup` (
 --
 
 INSERT INTO `setup` (`var`, `value`) VALUES
-('cname', 'In Out Management System'),
+('cname', 'College Name here'),
 ('libtime', '20:30:00'),
-('noname', 'Hello'),
-('sessiontime', '7200');
+('noname', 'USN'),
+('sessiontime', '7200'),
+('banner', 'false'),
+('activedash', 'quote');
 
 -- --------------------------------------------------------
 
@@ -192,6 +209,12 @@ ALTER TABLE `loc`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `log`
+--
+ALTER TABLE `log`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
@@ -219,7 +242,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `loc`
 --
 ALTER TABLE `loc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

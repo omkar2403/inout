@@ -1,6 +1,6 @@
-Download Stable Version 5 from Release Panel.
+Download Stable Version 5.1 from Release Panel.
 
-Change Log 5
+Changelog 5
 [New Features]
 * Automatic Checkin/checkout System
 * Backup System added
@@ -19,9 +19,35 @@ Change Log 5
 * 10 Second pause after checkout
 * Other visual minor bugs are fixed
 
-Migration from version v4.* to v5
+Migration from version v4.* to v5.*
 
 Update database from updatedb.txt file.
+
+[New Arrivals Setup]
+Book image must be 150x200 resolution and must be in PNG format.
+
+You can add upto 8 images of new arrival books.
+
+Rename your images 1.png, 2.png and so on.
+
+Move your all images to assets/books director. Replace existing images.
+
+Login to master. Go to setup then setup main screen. 
+
+Select New Arrivals and submit. Done!
+
+
+[Banner Setup]
+Banner image should be 890x150 resulution and must be in PNG format.
+
+You can design your own image in photoshop.
+
+Rename image file to banner.png and move to assets/img directory. Replace existing image file.
+
+Login to master. Go to setup then setup main screen. 
+
+Select display banner and submit. Done!
+
 
 SUGGESTIONS ARE WELCOME. FEEL FREE TO CONTACT.
 

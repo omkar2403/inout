@@ -3,7 +3,26 @@
 	require '../../functions/general.php';
   $edate = date("20y-m-d");
 
-	if(isset($_POST['basic'])){
+	if(isset($_POST['updateDash'])){
+    $activedash = $_POST['activedash'];
+    $query = "UPDATE `setup` SET `value` = '$activedash' WHERE `setup`.`var` = 'activedash'";
+    $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
+
+    if($_POST['banner'] == "name"){
+      $banner = "false";
+    }elseif($_POST['banner'] == "banner"){
+      $banner = "true";
+    }
+
+    $query = "UPDATE `setup` SET `value` = '$banner' WHERE `setup`.`var` = 'banner'";
+    $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
+
+    if($result){
+    	header("location:../../setup.php?msg=1");
+    }
+  }
+
+  if(isset($_POST['basic'])){
     $ccname = sanitize($conn, $_POST['cname']);
     $query = "UPDATE `setup` SET `value` = '$ccname' WHERE `setup`.`var` = 'cname'";
     $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
@@ -17,7 +36,7 @@
     $result = mysqli_query($conn, $query) or die("Invalid Query:".mysqli_error());
 
     if($result){
-    	header("location:../../setup.php?msg=1");
+      header("location:../../setup.php?msg=1");
     }
   }
 

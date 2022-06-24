@@ -65,6 +65,9 @@
           $_SESSION["lib"] = $setup['cname'];
           $_SESSION["libtime"] = $setup['libtime'];
           $_SESSION["noname"] = $setup['noname'];
+
+          $_SESSION["banner"] = $setup['banner'];
+          $_SESSION["activedash"] = $setup['activedash'];
           header("Location: dash.php");
         }else{
           header('location:login.php?msg=1');
