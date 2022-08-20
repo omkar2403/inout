@@ -24,19 +24,24 @@ Changelog 5
 * Other visual minor bugs are fixed
 
 **INSTALLATION OF PHP 7.4**
-```
+
 Open terminal and execute commands.
-
+```
 sudo apt-get update
-
+```
+```
 sudo apt -y install software-properties-common
-
+```
+```
 sudo add-apt-repository ppa:ondrej/php
-
+```
+```
 sudo apt-get update
-
+```
+```
 sudo apt -y install php7.4
-
+```
+```
 php -v
 ```
 
