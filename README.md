@@ -1,4 +1,4 @@
-Download Stable Version 5.1 from Release Panel.
+Download Stable Version 5.2 from Release Panel.
 
 Changelog 5.2
 * Input field is back [Not showing input field is fixed]
@@ -23,49 +23,59 @@ Changelog 5
 * 10 Second pause after checkout
 * Other visual minor bugs are fixed
 
-INSTALLATION OF PHP 7.4
-
+**INSTALLATION OF PHP 7.4**
+```
 Open terminal and execute commands.
 
 sudo apt-get update
+
 sudo apt -y install software-properties-common
+
 sudo add-apt-repository ppa:ondrej/php
+
 sudo apt-get update
+
 sudo apt -y install php7.4
+
 php -v
+```
 
 TO SWITCH BETWEEN PHP PLEASE GO THROUGH FOLLOWING LINK.
 
 https://github.com/omkar2403/inout/wiki/Blank-Screen-After-Installation
 
+
 Migration from version v4.* to v5.*
 
-Read and Update database from updatedb.txt file.
-
-[New Arrivals Setup]
-Book image must be 150x200 resolution and must be in PNG format.
-
-You can add upto 8 images of new arrival books.
-
-Rename your images 1.png, 2.png and so on.
-
-Move your all images to assets/books director. Replace existing images.
-
-Login to master. Go to setup then setup main screen. 
-
-Select New Arrivals and submit. Done!
+* Read and Update database from updatedb.txt file.
 
 
-[Banner Setup]
-Banner image should be 890x150 resulution and must be in PNG format.
+**New Arrivals Setup**
 
-You can design your own image in photoshop.
+* Book image must be 150x200 resolution and must be in PNG format.
 
-Rename image file to banner.png and move to assets/img directory. Replace existing image file.
+* You can add upto 8 images of new arrival books.
 
-Login to master. Go to setup then setup main screen. 
+* Rename your images 1.png, 2.png and so on.
 
-Select display banner and submit. Done!
+* Move your all images to assets/books director. Replace existing images.
+
+* Login to master. Go to setup then setup main screen. 
+
+* Select New Arrivals and submit. Done!
+
+
+**Banner Setup**
+
+* Banner image should be 890x150 resulution and must be in PNG format.
+
+* You can design your own image in photoshop.
+
+* Rename image file to banner.png and move to assets/img directory. Replace existing image file.
+
+* Login to master. Go to setup then setup main screen. 
+
+* Select display banner and submit. Done!
 
 
 SUGGESTIONS ARE WELCOME. FEEL FREE TO CONTACT.
@@ -75,6 +85,7 @@ For any queries New Ticket System is open for all. Please open an ticket and sub
 https://ticket.playtech.in/
 
 For first time, create a new account. 
+
 
 Introduction:
 
@@ -92,7 +103,7 @@ Find the Guide Here: https://writeride.com/how-to-install-in-out-management-syst
 
 Profile @ https://omkar2403.github.io/its_me/
 
-[Only Urgent] Mail Me @ omkar.kakeru@gmail.com else use our ticket system mentioned above.
+**Only Urgent** Mail Me @ omkar.kakeru@gmail.com else use our ticket system mentioned above.
 
 Demo Video @ https://www.youtube.com/watch?v=1LqqwKYamHc
 
