@@ -1,8 +1,12 @@
 Download Stable Version 5.1 from Release Panel.
 
+Changelog 5.2
+* Input field is back [Not showing input field is fixed]
+* Minor bugfixes
+
 Changelog 5
 [New Features]
-* Automatic Checkin/checkout System
+* Automatic Checkin/checkout System //Discontinued
 * Backup System added
 * New user interface
 * New arrival display
@@ -19,9 +23,24 @@ Changelog 5
 * 10 Second pause after checkout
 * Other visual minor bugs are fixed
 
+INSTALLATION OF PHP 7.4
+
+Open terminal and execute commands.
+
+sudo apt-get update
+sudo apt -y install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt -y install php7.4
+php -v
+
+TO SWITCH BETWEEN PHP PLEASE GO THROUGH FOLLOWING LINK.
+
+https://github.com/omkar2403/inout/wiki/Blank-Screen-After-Installation
+
 Migration from version v4.* to v5.*
 
-Update database from updatedb.txt file.
+Read and Update database from updatedb.txt file.
 
 [New Arrivals Setup]
 Book image must be 150x200 resolution and must be in PNG format.
