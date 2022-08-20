@@ -164,7 +164,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: calc(100vh - 326px);
+  height: calc(100vh - 363px);
   margin-top: 100px;
 }
 
@@ -220,7 +220,7 @@
 
 .card-block2 {
   position: relative;
-  background-image: url("http://localhost/inout/assets/img/quote.jpg");
+  background-image: url("../img/quote.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 20rem;

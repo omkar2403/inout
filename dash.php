@@ -143,7 +143,7 @@
 		    	<h2>In Out Management System</h2>
 		    	<h3><?php echo $_SESSION['locname']; ?></h3>
 		    	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
-		        <input type="text" name="id" id="usn" class="usn_input" value="" autofocus="true">
+		        <input type="text" name="id" id="usn" class="" value="" autofocus="true">
 					</form>
 		    </div>
 	    	<?php
