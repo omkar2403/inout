@@ -1,8 +1,6 @@
 <?php
 	session_start();
-	// ob_start(ob_gzhandler);
 	$title = "Setup";
-	// $acc_code = "S01";
 	$acc_code = "S01";
 	require "./functions/access.php";
 	require_once "./template/header.php";
@@ -223,12 +221,15 @@
 </div>
 <!-- MAIN CONTENT ENDS -->
 <?php
-	if($_GET['msg']=="1"){
-    echo "<script type='text/javascript'>showNotification('top','right','Basic Informtion Updated Successfully', 'success');</script>";
-  }
-  if($_GET['msg']=="2"){
-    echo "<script type='text/javascript'>showNotification('top','right','Location Added Successfully', 'success');</script>";
+  if (isset($_GET['msg'])) {
+    $msg = $_GET['msg'];
+
+    if ($msg == "1") {
+      echo "<script type='text/javascript'>showNotification('top','right','Basic Information Updated Successfully', 'success');</script>";
+    }
+    if ($msg == "2") {
+      echo "<script type='text/javascript'>showNotification('top','right','Location Added Successfully', 'success');</script>";
+    }
   }
 	require_once "./template/footer.php";
-	// ob_end_flush();
 ?>

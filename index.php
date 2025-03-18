@@ -22,14 +22,25 @@
 </script>
 <!-- MAIN CONTENT ENDS -->
 <?php
-    if($_GET['msg']=="Evening"){
-      echo "<script type='text/javascript'>showNotification('top','right','Good Evening ".$_SESSION['user_name']."', 'info');</script>";
-    }
-    if($_GET['msg']=="Morning"){
-      echo "<script type='text/javascript'>showNotification('top','right','Good Morning ".$_SESSION['user_name']."', 'info');</script>";
-    }
-    if($_GET['msg']=="Noon"){
-      echo "<script type='text/javascript'>showNotification('top','right','Good After Noon ".$_SESSION['user_name']."', 'info');</script>";
+    if (isset($_GET['msg']) && isset($_SESSION['user_name'])) {
+        $msg = htmlspecialchars($_GET['msg']); // Prevent XSS attacks
+        $user_name = htmlspecialchars($_SESSION['user_name']); // Sanitize session data
+    
+        switch ($msg) {
+            case "Evening":
+                echo "<script type='text/javascript'>showNotification('top','right','Good Evening $user_name', 'info');</script>";
+                break;
+            case "Morning":
+                echo "<script type='text/javascript'>showNotification('top','right','Good Morning $user_name', 'info');</script>";
+                break;
+            case "Noon":
+                echo "<script type='text/javascript'>showNotification('top','right','Good Afternoon $user_name', 'info');</script>";
+                break;
+            default:
+                // Optional: Handle unknown values
+                echo "<script type='text/javascript'>showNotification('top','right','Hello $user_name', 'info');</script>";
+                break;
+        }
     }
 	require_once "./template/footer.php";
 	ob_end_flush();

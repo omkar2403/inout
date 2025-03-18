@@ -1,4 +1,16 @@
-Download Stable Version 5.2 from Release Panel.
+Download Stable Version 6.0 from Release Panel.
+
+Uncoming Updates:
+* Introducing Inout Plus app
+* Client less Inout App (Mobile App)
+* KOHA Mobile app
+* Social Community App for Institutions based on KOHA
+for more information or demo contact on +918197173097 or email on info@playtech.in
+
+
+Changelog v6.0
+* Support php8.*
+* Minor bug fixes
 
 Changelog 5.2
 * Input field is back [Not showing input field is fixed]
@@ -23,33 +35,16 @@ Changelog 5
 * 10 Second pause after checkout
 * Other visual minor bugs are fixed
 
-**INSTALLATION OF PHP 7.4**
+**INSTALLATION**
+Please refer install.md file.
 
-Open terminal and execute commands.
-```
-sudo apt-get update
-```
-```
-sudo apt -y install software-properties-common
-```
-```
-sudo add-apt-repository ppa:ondrej/php
-```
-```
-sudo apt-get update
-```
-```
-sudo apt -y install php7.4
-```
-```
-php -v
-```
 
 TO SWITCH BETWEEN PHP PLEASE GO THROUGH FOLLOWING LINK.
 
 https://github.com/omkar2403/inout/wiki/Blank-Screen-After-Installation
 
 
+No need of migration of Database from v5.* to v6
 Migration from version v4.* to v5.*
 
 * Read and Update database from updatedb.txt file.

@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	// ob_start(ob_gzhandler);
 	$title = "Entry Register";
 	$acc_code = "U03";
 	$slib = $_SESSION['loc'];
@@ -58,7 +57,7 @@
                   	<td><?php echo $row['exit']; ?></td>
                   </tr>
                 <?php
-                  } //while end
+                  } 
 			        	?>
 			        </tbody>
 			        <tfoot>
@@ -71,7 +70,6 @@
 	                <th></th>
 	                <th></th>
 	                <th></th>
-	                <!-- <th></th> -->
 		            </tr>
 		        	</tfoot>
 			      </table>
@@ -84,5 +82,4 @@
 <!-- MAIN CONTENT ENDS -->
 <?php
 	require_once "./template/footer.php";
-	// ob_end_flush();
 ?>

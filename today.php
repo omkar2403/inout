@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	// ob_start(ob_gzhandler);
 	$title = "Today's Entry";
 	$acc_code = "U02";
 	$table = true;
@@ -64,7 +63,7 @@
                   	<td><?php echo $row['exit']; ?></td>
                   </tr>
                 <?php
-                  } //while end
+                  }
 			        	?>
 			        </tbody>
 			        <tfoot>
@@ -77,7 +76,6 @@
 	                <th></th>
 	                <th></th>
 	                <th></th>
-	                <!-- <th></th> -->
 		            </tr>
 		        	</tfoot>
 			      </table>
@@ -90,5 +88,4 @@
 <!-- MAIN CONTENT ENDS -->
 <?php
 	require_once "./template/footer.php";
-	// ob_end_flush();
 ?>

@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	// ob_start(ob_gzhandler);
 	$title = "Notice";
 	$acc_code = "N01";
 	require "./functions/access.php";
@@ -96,13 +95,15 @@
 </div>
 <!-- MAIN CONTENT ENDS -->
 <?php
-	if($_GET['msg']==1){
-    echo "<script type='text/javascript'>showNotification('top','right','Notice Added and Activated', 'success');</script>";
+  if (isset($_GET['msg'])) {
+    $msg = $_GET['msg'];
+
+    if ($msg == 1) {
+      echo "<script type='text/javascript'>showNotification('top','right','Notice Added and Activated', 'success');</script>";
+    } elseif ($msg == 2) {
+      echo "<script type='text/javascript'>showNotification('top','right','Status Updated', 'success');</script>";
+    }
   }
 
-  if($_GET['msg']==2){
-    echo "<script type='text/javascript'>showNotification('top','right','Status Updated', 'success');</script>";
-  }
-	require_once "./template/footer.php";
-	// ob_end_flush();
+  require_once "./template/footer.php";
 ?>

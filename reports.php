@@ -1,9 +1,7 @@
 <?php
 	session_start();
-	// ob_start(ob_gzhandler);
 	$title = "Reports";
 	$acc_code = "";
-	// $acc_code = "R01";
 	require "./functions/access.php";
 	require_once "./template/header.php";
 	require_once "./template/sidebar.php";
@@ -194,5 +192,4 @@
 <!-- MAIN CONTENT ENDS -->
 <?php
 	require_once "./template/footer.php";
-	// ob_end_flush();
 ?>

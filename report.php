@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	// ob_start(ob_gzhandler);
 	$title = "Report";
 	$acc_code = "R01";
 	$table = true;
@@ -91,7 +90,7 @@
       }
       $sql = "SELECT date, DAYNAME(`DATE`), SUM(`secs`) FROM `tmp1` GROUP BY date";
       $result = mysqli_query($conn, $sql) or die("Invalid query: " . mysqli_error($conn));
-	  } //end of short
+	  } 
 
 	  if($flag == "Detail"){
 	  	if($slib=="Master"){
@@ -100,7 +99,7 @@
       	$sql = "SELECT date, SUBTIME(`exit`,`entry`), `exit`, `entry`, DAYNAME(`DATE`), `loc`  FROM `inout` WHERE `cardnumber`='$usn' AND (`date` between '$fdate' and '$tdate') and `loc`='$slib'";
       }
       $result = mysqli_query($conn, $sql) or die("Invalid query: " . mysqli_error($conn));
-	  } //end of detail report
+	  } 
 
 	}
 
@@ -160,7 +159,7 @@
 	                	<td><?php echo $row['branch']; ?></td>
 	                </tr>
 	              <?php
-	                } //while end
+	                }
 			        	?>
 			        	<tr>
 			        		<td>Total</td>
@@ -190,8 +189,8 @@
 				</div>
 			</div>
 			<?php
-				} //end of datewise
-				if ($flag == "Short") {
+				} 
+				if (isset($flag) && $flag == "Short")  {
 			?>
 					<div class="col-md-6 ml-auto mr-auto">
 						<div class="card">
@@ -223,7 +222,7 @@
 		                    <td><?php echo $tot; ?> Hours</td>
 		                  </tr>
 		                <?php
-		                  } //while end
+		                  } 
 		                  $sql = "TRUNCATE TABLE `tmp1`;";
 		                  $result = mysqli_query($conn, $sql) or die("Invalid query: " . mysqli_error($conn));
 					        	?>
@@ -240,8 +239,8 @@
 						</div>
 					</div>
 			<?php
-				} //end of studentwise short report
-				if ($flag == "Detail") {
+				} 
+				if (isset($flag) && $flag == "Detail")  {
 			?>
 				<div class="col-md-12">
 					<div class="card">
@@ -277,7 +276,7 @@
 		                	<td><?php echo $row[5]; ?></td>
 		                </tr>
 		              <?php
-		                } //while end
+		                } 
 				        	?>
 				        </tbody>
 				        <tfoot>
@@ -295,7 +294,7 @@
 					</div>
 				</div>
 			<?php
-				} //end of studentwise Detailed report
+				}
 				if (isset($_POST['statRep'])) {
 			?>
 				<div class="col-md-8 ml-auto mr-auto">
@@ -404,7 +403,7 @@
 					</div>
 				</div>
 			<?php
-				} //end of statistaical reports
+				} 
 			?>
 	  </div>              
 	</div>
@@ -412,5 +411,5 @@
 <!-- MAIN CONTENT ENDS -->
 <?php
 	require_once "./template/footer.php";
-	// ob_end_flush();
+
 ?>

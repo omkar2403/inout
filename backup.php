@@ -1,23 +1,32 @@
 <?php
-  session_start();
-  // ob_start(ob_gzhandler);
-  $title = "Backup";
-  $acc_code = "R01";
-  require "./functions/access.php";
-  require_once "./template/header.php";
-  require_once "./template/sidebar.php";
-  require "functions/dbconn.php";
-  require "functions/dbfunc.php";
-  require "functions/general.php";  
+// declare(strict_types=1);
+
+session_start();
+
+$title = "Backup";
+$acc_code = "R01";
+
+require "./functions/access.php";
+require_once "./template/header.php";
+require_once "./template/sidebar.php";
+require "functions/dbconn.php";
+require "functions/dbfunc.php";
+require "functions/general.php";  
+
+// Ensure user is logged in before accessing session variables
+$userName = $_SESSION['user_name'] ?? 'Guest';
+
 ?>
+
 <!-- MAIN CONTENT START -->
 <div class="content" style="min-height: calc(100vh - 160px);">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-         Welcome <?php echo $_SESSION['user_name']; ?>..
+         Welcome <?php echo htmlspecialchars($userName, ENT_QUOTES, 'UTF-8'); ?>..
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-3">
         <div class="card">
@@ -39,31 +48,32 @@
             <div class="card-icon">
               <i class="material-icons">search</i>
             </div>
-            <h4 class="card-title">Backup</h4>
+            <h4 class="card-title">Backup History</h4>
           </div>
           <div class="card-body">
             <table class="table table-striped table-hover">
-              <thead >
-                <tr >
-                <th>Sl No</th>
-                <th>Date</th>                                                    
-                <th>Time</th>
-                <th>Status</th>
+              <thead>
+                <tr>
+                  <th>Sl No</th>
+                  <th>Date</th>                                                    
+                  <th>Time</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
                   $res = getBackupData($conn, "log");
                   $n = 1;
-                  while ($row = mysqli_fetch_array($res)) {
-                    if($row['action'] == "Database Backup Done") {
+
+                  while ($row = mysqli_fetch_assoc($res)) {
+                    if ($row['action'] === "Database Backup Done") {
                       $date = date("d-M-Y", strtotime($row['date']));
-                      echo "<tr >
-                        <td>{$n}</td>
-                        <td>{$date}</td>
-                        <td>{$row['time']}</td>
-                        <td>{$row['action']}</td>
-                      </tr>";
+                      echo "<tr>
+                              <td>{$n}</td>
+                              <td>{$date}</td>
+                              <td>{$row['time']}</td>
+                              <td>{$row['action']}</td>
+                            </tr>";
                       $n++;
                     }
                   }
@@ -77,6 +87,7 @@
   </div>
 </div>
 <!-- MAIN CONTENT ENDS -->
+
 <?php
-  require_once "./template/footer.php";
+require_once "./template/footer.php";
 ?>
